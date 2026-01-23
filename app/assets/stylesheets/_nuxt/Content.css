@@ -1,0 +1,1115 @@
+[data-v-97be2c38]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.scrolling-slider__item[data-v-97be2c38] {
+    flex-shrink: 0;
+    height: 100%;
+    margin-right: 1.3888888889vw;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 34.5138888889vw
+}
+
+@media (max-width: 860px) {
+    .scrolling-slider__item[data-v-97be2c38] {
+        margin-right:16px;
+        width: calc(288.77465px + 14.46009vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .scrolling-slider__item[data-v-97be2c38] {
+        width:343px
+    }
+}
+
+.scrolling-slider__item img[data-v-97be2c38] {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+[data-v-b02cf8eb]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.scrolling-slider[data-v-b02cf8eb] {
+    align-items: center;
+    display: flex;
+    height: 25vw;
+    margin-top: 6.9444444444vw;
+    position: relative;
+    width: calc(100% + 2.77778vw)
+}
+
+@media (max-width: 860px) {
+    .scrolling-slider[data-v-b02cf8eb] {
+        height:calc(182.87324px + 12.30047vw);
+        margin-top: 48px;
+        width: calc(100% + 32px)
+    }
+}
+
+@media (max-width: 460px) {
+    .scrolling-slider[data-v-b02cf8eb] {
+        height:229px;
+        width: calc(100% + 16px)
+    }
+}
+
+.scrolling-slider__plus-wrapper[data-v-b02cf8eb] {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin-right: 1.3888888889vw
+}
+
+@media (max-width: 860px) {
+    .scrolling-slider__plus-wrapper[data-v-b02cf8eb] {
+        margin-right:16px
+    }
+}
+
+.scrolling-slider__plus-wrapper svg[data-v-b02cf8eb] {
+    color: var(--basic-black);
+    display: block;
+    height: 1.5277777778vw;
+    width: 1.5277777778vw
+}
+
+@media (max-width: 860px) {
+    .scrolling-slider__plus-wrapper svg[data-v-b02cf8eb] {
+        height:18px;
+        width: 18px
+    }
+}
+
+.scrolling-slider__content[data-v-b02cf8eb] {
+    cursor: none;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.scrolling-slider__wrapper[data-v-b02cf8eb] {
+    display: flex;
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    will-change: transform
+}
+
+.scrolling-slider__drag[data-v-b02cf8eb] {
+    align-items: center;
+    background-color: var(--basic-black);
+    border-radius: 50%;
+    color: var(--basic-white);
+    display: flex;
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: .6944444444vw;
+    font-weight: 500;
+    height: 4.1666666667vw;
+    justify-content: center;
+    left: calc(var(--indicator-x, 0px) - 2.08333vw);
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    text-transform: uppercase;
+    top: calc(var(--indicator-y, 0px) - 2.08333vw);
+    transform: scale(.5);
+    transition: transform .4s ease,opacity .4s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 4.1666666667vw;
+    z-index: 1000
+}
+
+@media (max-width: 860px) {
+    .scrolling-slider__drag[data-v-b02cf8eb] {
+        display:none
+    }
+}
+
+.scrolling-slider__drag.visible[data-v-b02cf8eb] {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.scrolling-slider__drag.active[data-v-b02cf8eb] {
+    transform: scale(.8)
+}
+
+[data-v-9056a5ec]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.connect[data-v-9056a5ec] {
+    background-color: var(--neutral-100);
+    color: var(--basic-black);
+    padding-bottom: 4.1666666667vw;
+    padding-top: 6.9444444444vw;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .connect[data-v-9056a5ec] {
+        padding-bottom:54px;
+        padding-top: 60px
+    }
+}
+
+@media (min-width: 860px) {
+    .connect__top[data-v-9056a5ec] {
+        align-items:start;
+        display: flex;
+        justify-content: space-between
+    }
+}
+
+.connect__title[data-v-9056a5ec] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 4.1666666667vw;
+    font-weight: 500;
+    line-height: 1em;
+    max-width: 53.5416666667vw
+}
+
+@media (max-width: 860px) {
+    .connect__title[data-v-9056a5ec] {
+        font-size:calc(38.3662px + 1.50235vw);
+        max-width: 100%
+    }
+}
+
+@media (max-width: 460px) {
+    .connect__title[data-v-9056a5ec] {
+        font-size:44px
+    }
+}
+
+@media (max-width: 860px) {
+    .connect__btn[data-v-9056a5ec] {
+        display:none
+    }
+}
+
+.connect__bottom[data-v-9056a5ec] {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9.0277777778vw;
+    width: 100%
+}
+
+@media (max-width: 860px) {
+    .connect__bottom[data-v-9056a5ec] {
+        margin-top:48px
+    }
+}
+
+@media (min-width: 860px) {
+    .connect__bottom-wrapper[data-v-9056a5ec] {
+        align-items:end;
+        -moz-column-gap: 10.9027777778vw;
+        column-gap: 10.9027777778vw;
+        display: flex
+    }
+}
+
+.connect__scroll-text[data-v-9056a5ec] {
+    align-items: center;
+    -moz-column-gap: .8333333333vw;
+    column-gap: .8333333333vw;
+    display: flex;
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: .9722222222vw;
+    font-weight: 500;
+    line-height: 1em
+}
+
+@media (max-width: 860px) {
+    .connect__scroll-text[data-v-9056a5ec] {
+        display:none
+    }
+}
+
+.connect__scroll-text .connect__arrow[data-v-9056a5ec] {
+    height: 1.25vw;
+    width: 1.25vw
+}
+
+.connect__scroll-text span[data-v-9056a5ec] {
+    position: relative
+}
+
+@media (min-width: 860px) {
+    .connect__scroll-text span[data-v-9056a5ec] {
+        top:.1388888889vw
+    }
+}
+
+.connect__place[data-v-9056a5ec] {
+    align-items: center;
+    -moz-column-gap: .8333333333vw;
+    column-gap: .8333333333vw;
+    display: flex;
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: .9722222222vw;
+    font-weight: 500;
+    line-height: 1em
+}
+
+.connect__place span[data-v-9056a5ec] {
+    background-color: var(--basic-black);
+    border-radius: 100%;
+    display: block;
+    height: .5555555556vw;
+    width: .5555555556vw
+}
+
+@media (max-width: 860px) {
+    .connect__place[data-v-9056a5ec] {
+        display:none
+    }
+}
+
+.connect__description[data-v-9056a5ec] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 1.2em;
+    max-width: 22.2222222222vw
+}
+
+@media (max-width: 860px) {
+    .connect__description[data-v-9056a5ec] {
+        font-size:18px;
+        max-width: 70%
+    }
+}
+
+@media (max-width: 460px) {
+    .connect__description[data-v-9056a5ec] {
+        max-width:90%
+    }
+}
+
+[data-v-2c5f614c]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.hero__wrapper[data-v-2c5f614c] {
+    height: 100svh;
+    position: relative
+}
+
+.hero__img[data-v-2c5f614c],.hero__middle[data-v-2c5f614c] {
+    height: 100%;
+    width: 100%
+}
+
+.hero__img[data-v-2c5f614c] {
+    display: block;
+    left: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2
+}
+
+@media (min-width: 860px) {
+    .hero__img[data-v-2c5f614c] {
+        height:70vh;
+        width: 85vw
+    }
+}
+
+.hero__title[data-v-2c5f614c] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 6.1111111111vw;
+    font-weight: 500;
+    left: 50%;
+    line-height: 1em;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 3
+}
+
+@media (max-width: 860px) {
+    .hero__title[data-v-2c5f614c] {
+        font-size:calc(28.50704px + 4.13146vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .hero__title[data-v-2c5f614c] {
+        font-size:44px
+    }
+}
+
+@media (min-width: 860px) {
+    .hero__title[data-v-2c5f614c] {
+        max-width:66.25vw
+    }
+}
+
+@media (max-width: 860px) {
+    .hero__title[data-v-2c5f614c] {
+        padding:0 32px
+    }
+}
+
+@media (max-width: 460px) {
+    .hero__title[data-v-2c5f614c] {
+        padding:0 16px
+    }
+}
+
+.hero__bottom[data-v-2c5f614c] {
+    bottom: 6.6666666667vh;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%
+}
+
+@media (min-width: 860px) {
+    .hero__bottom[data-v-2c5f614c] {
+        padding:0 2.7777777778vw
+    }
+}
+
+@media (max-width: 860px) {
+    .hero__bottom[data-v-2c5f614c] {
+        bottom:36px;
+        justify-content: center
+    }
+}
+
+.hero__scroll-text[data-v-2c5f614c] {
+    align-items: center;
+    -moz-column-gap: .8333333333vw;
+    column-gap: .8333333333vw;
+    display: flex;
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: .9722222222vw;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .hero__scroll-text[data-v-2c5f614c] {
+        -moz-column-gap:12px;
+        column-gap: 12px;
+        font-size: 14px
+    }
+}
+
+.hero__scroll-text .hero__arrow[data-v-2c5f614c] {
+    height: 1.25vw;
+    width: 1.25vw
+}
+
+@media (max-width: 860px) {
+    .hero__scroll-text .hero__arrow[data-v-2c5f614c] {
+        height:16px;
+        width: 16px
+    }
+}
+
+.hero__scroll-text:first-child span[data-v-2c5f614c] {
+    position: relative
+}
+
+@media (min-width: 860px) {
+    .hero__scroll-text:first-child span[data-v-2c5f614c] {
+        top:.1388888889vw
+    }
+}
+
+[data-v-4d211199]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.numbers-stat__card[data-v-4d211199] {
+    background-color: var(--basic-white);
+    color: var(--basic-black);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6666666667vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: space-between;
+    padding: 1.3888888889vw 1.1111111111vw 1.1111111111vw;
+    position: relative;
+    width: 100%
+}
+
+@media (min-width: 860px) {
+    .numbers-stat__card[data-v-4d211199]:nth-child(2),.numbers-stat__card[data-v-4d211199]:nth-child(4) {
+        margin-top:16.6666666667vw
+    }
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__card[data-v-4d211199] {
+        gap:20px;
+        padding: 16px
+    }
+}
+
+.numbers-stat__number[data-v-4d211199] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 5.5555555556vw;
+    font-weight: 500;
+    line-height: 1em
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__number[data-v-4d211199] {
+        font-size:calc(58.3662px + 1.50235vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .numbers-stat__number[data-v-4d211199] {
+        font-size:64px
+    }
+}
+
+.numbers-stat__desc[data-v-4d211199] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.6666666667vw;
+    font-weight: 500;
+    line-height: 1em;
+    margin-top: .5555555556vw;
+    text-transform: lowercase
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__desc[data-v-4d211199] {
+        font-size:24px
+    }
+}
+
+@media (max-width: 460px) {
+    .numbers-stat__desc[data-v-4d211199] {
+        font-size:24px
+    }
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__desc[data-v-4d211199] {
+        margin-top:8px
+    }
+}
+
+.numbers-stat__img[data-v-4d211199] {
+    aspect-ratio: 1;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+[data-v-f8c25b64]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.numbers-stat[data-v-f8c25b64] {
+    background-color: var(--neutral-500);
+    padding-bottom: 13.8888888889vw;
+    padding-top: 6.9444444444vw
+}
+
+@media (max-width: 860px) {
+    .numbers-stat[data-v-f8c25b64] {
+        padding-bottom:60px;
+        padding-top: 24px
+    }
+}
+
+.numbers-stat__top[data-v-f8c25b64] {
+    align-items: end;
+    display: flex;
+    justify-content: space-between
+}
+
+.numbers-stat__title[data-v-f8c25b64] {
+    color: var(--neutral-200);
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 4.1666666667vw;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__title[data-v-f8c25b64] {
+        font-size:calc(27.5493px + 2.25352vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .numbers-stat__title[data-v-f8c25b64] {
+        font-size:36px
+    }
+}
+
+.numbers-stat__cards[data-v-f8c25b64] {
+    display: grid;
+    gap: 1.3888888889vw;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 6.9444444444vw;
+    width: 100%
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__cards[data-v-f8c25b64] {
+        gap:32px;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 60px
+    }
+}
+
+@media (max-width: 560px) {
+    .numbers-stat__cards[data-v-f8c25b64] {
+        grid-template-columns:1fr
+    }
+}
+
+.numbers-stat__btn[data-v-f8c25b64] {
+    display: block;
+    margin: 6.25vw auto 0
+}
+
+@media (max-width: 860px) {
+    .numbers-stat__btn[data-v-f8c25b64] {
+        margin-top:48px
+    }
+}
+
+[data-v-c00f965b]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.video[data-v-c00f965b] {
+    background-color: var(--neutral-500)
+}
+
+[data-v-8b769f65]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.home-companies[data-v-8b769f65] {
+    padding-bottom: 11.1111111111vw;
+    padding-top: 2.7777777778vw
+}
+
+@media (max-width: 800px) {
+    .home-companies[data-v-8b769f65] {
+        padding-bottom:60px;
+        padding-top: 24px
+    }
+}
+
+.home-companies__title[data-v-8b769f65] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 5.5555555556vw;
+    font-weight: 500;
+    line-height: 1em;
+    width: 100%
+}
+
+@media (max-width: 860px) {
+    .home-companies__title[data-v-8b769f65] {
+        font-size:calc(58.3662px + 1.50235vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .home-companies__title[data-v-8b769f65] {
+        font-size:64px
+    }
+}
+
+@media (max-width: 860px) {
+    .home-companies__title[data-v-8b769f65] {
+        font-family:HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        font-size: 6.1111111111vw;
+        font-weight: 500;
+        line-height: 1em
+    }
+}
+
+@media (max-width: 860px) and (max-width:860px) {
+    .home-companies__title[data-v-8b769f65] {
+        font-size:calc(28.50704px + 4.13146vw)
+    }
+}
+
+@media (max-width: 860px) and (max-width:460px) {
+    .home-companies__title[data-v-8b769f65] {
+        font-size:44px
+    }
+}
+
+@media (min-width: 800px) {
+    .home-companies__title[data-v-8b769f65] {
+        margin-left:auto;
+        width: 62.5vw
+    }
+}
+
+.home-companies__content[data-v-8b769f65] {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11.1111111111vw
+}
+
+@media (max-width: 800px) {
+    .home-companies__content[data-v-8b769f65] {
+        flex-direction:column;
+        gap: 60px;
+        margin-top: 60px
+    }
+}
+
+.home-compaines__asset[data-v-8b769f65] {
+    flex-grow: 0;
+    height: 100%;
+    max-width: 100%;
+    width: 62.5vw
+}
+
+@media (max-width: 800px) {
+    .home-compaines__asset[data-v-8b769f65] {
+        width:100%
+    }
+}
+
+.home-companies__text-content[data-v-8b769f65] {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 2.2222222222vw;
+    width: 22.5694444444vw
+}
+
+@media (max-width: 800px) {
+    .home-companies__text-content[data-v-8b769f65] {
+        gap:24px;
+        max-width: 254px;
+        width: 100%
+    }
+}
+
+.home-companies__text[data-v-8b769f65] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 1.22em
+}
+
+@media (max-width: 860px) {
+    .home-companies__text[data-v-8b769f65] {
+        font-size:calc(15.29577px + .18779vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .home-companies__text[data-v-8b769f65] {
+        font-size:16px
+    }
+}
+
+.home-compaines__btn[data-v-8b769f65] {
+    width: -moz-fit-content;
+    width: fit-content
+}

@@ -1,0 +1,61 @@
+[data-v-24cffc8d]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.dark-layer[data-v-24cffc8d] {
+    background-image: linear-gradient(180deg,#3a3838,#20202080);
+    height: 100%;
+    left: 0;
+    mix-blend-mode: hard-light;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    will-change: auto;
+    z-index: 1
+}

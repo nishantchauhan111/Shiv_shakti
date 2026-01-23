@@ -1,0 +1,591 @@
+[data-v-b056a380]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.cd[data-v-b056a380] {
+    background-color: var(--neutral-600);
+    height: 100%;
+    padding-bottom: 13.8888888889vw;
+    padding-top: 2.7777777778vw;
+    position: relative
+}
+
+@media (max-width: 860px) {
+    .cd[data-v-b056a380] {
+        padding-bottom:48px;
+        padding-top: 24px
+    }
+}
+
+.cd__title-wrapper[data-v-b056a380] {
+    margin-bottom: 60px
+}
+
+@media (min-width: 800px) {
+    .cd__title-wrapper[data-v-b056a380] {
+        display:flex;
+        justify-content: flex-end;
+        margin-bottom: 13.8888888889vw;
+        width: 100%
+    }
+}
+
+.cd__title[data-v-b056a380] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 6.1111111111vw;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .cd__title[data-v-b056a380] {
+        font-size:calc(28.50704px + 4.13146vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .cd__title[data-v-b056a380] {
+        font-size:44px
+    }
+}
+
+@media (min-width: 860px) {
+    .cd__title[data-v-b056a380] {
+        width:66.6666666667vw
+    }
+}
+
+.cd__block[data-v-b056a380] {
+    position: relative
+}
+
+.cd__list[data-v-b056a380] {
+    display: flex;
+    flex-direction: column;
+    gap: 5.4166666667vw
+}
+
+@media (max-width: 800px) {
+    .cd__list[data-v-b056a380] {
+        gap:60px
+    }
+}
+
+.cd-item[data-v-b056a380] {
+    border-top: 1px solid var(--neutral-300);
+    display: flex;
+    padding-top: 3.3333333333vw
+}
+
+@media (max-width: 800px) {
+    .cd-item[data-v-b056a380] {
+        flex-direction:column;
+        padding-top: 16px
+    }
+}
+
+.cd-item__title[data-v-b056a380] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 2.7777777778vw;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .cd-item__title[data-v-b056a380] {
+        font-size:calc(18.3662px + 1.50235vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .cd-item__title[data-v-b056a380] {
+        font-size:24px
+    }
+}
+
+@media (min-width: 800px) {
+    .cd-item__title[data-v-b056a380] {
+        margin-right:1.3888888889vw;
+        width: 26.5972222222vw
+    }
+}
+
+.cd-item__asset[data-v-b056a380] {
+    aspect-ratio: 324/246;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 22.5vw
+}
+
+@media (max-width: 800px) {
+    .cd-item__asset[data-v-b056a380] {
+        margin-top:20px;
+        width: 100%
+    }
+}
+
+.cd-item__text[data-v-b056a380] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 1.22em
+}
+
+@media (max-width: 860px) {
+    .cd-item__text[data-v-b056a380] {
+        font-size:calc(15.29577px + .18779vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .cd-item__text[data-v-b056a380] {
+        font-size:16px
+    }
+}
+
+@media (min-width: 800px) {
+    .cd-item__text[data-v-b056a380] {
+        margin-left:5.5555555556vw;
+        width: 38.5416666667vw
+    }
+}
+
+@media (max-width: 800px) {
+    .cd-item__text[data-v-b056a380] {
+        margin-top:24px
+    }
+}
+
+[data-v-90acafa8]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.featured-projects[data-v-90acafa8] {
+    position: relative
+}
+
+.featured-projects__bg-wrapper[data-v-90acafa8] {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0
+}
+
+.featured-projects__bg[data-v-90acafa8] {
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    will-change: transform;
+    z-index: 0
+}
+
+.featured-projects__scroll-wrapper[data-v-90acafa8] {
+    position: relative
+}
+
+.featured-projects__content[data-v-90acafa8] {
+    display: flex;
+    gap: 6.9444444444vw;
+    height: 100svh;
+    justify-content: space-between;
+    padding: 11.1111111111vh 6.7361111111vw 11.1111111111vh 10.7638888889vw
+}
+
+@media (max-width: 860px) {
+    .featured-projects__content[data-v-90acafa8] {
+        align-items:center;
+        flex-direction: column-reverse;
+        gap: 32px;
+        justify-content: center;
+        padding: 40px 15px
+    }
+}
+
+.fpc[data-v-90acafa8] {
+    aspect-ratio: .72;
+    background-color: var(--neutral-400);
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    height: clamp(50%,76vh,47.5vw);
+    max-width: 100%;
+    padding: 1.1111111111vw;
+    position: relative;
+    z-index: 2
+}
+
+@media (min-width: 860px) {
+    .fpc[data-v-90acafa8] {
+        transition:transform .8s cubic-bezier(.16,1,.3,1)
+    }
+
+    .fpc .fpc__assets[data-v-90acafa8] {
+        clip-path: inset(0);
+        transition: clip-path .8s cubic-bezier(.16,1,.3,1)
+    }
+
+    .fpc:hover .fpc__assets[data-v-90acafa8] {
+        clip-path: inset(2%)
+    }
+}
+
+@media (max-width: 860px) {
+    .fpc[data-v-90acafa8] {
+        height:65%;
+        padding: 16px;
+        width: auto
+    }
+}
+
+@media (max-width: 460px) {
+    .fpc[data-v-90acafa8] {
+        aspect-ratio:unset;
+        flex: 1;
+        height: -moz-fit-content;
+        height: fit-content;
+        max-height: 518px;
+        width: 100%
+    }
+}
+
+.fpc__assets[data-v-90acafa8] {
+    flex: 0 1 auto;
+    height: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.fpc__image-item[data-v-90acafa8] {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    will-change: transform
+}
+
+.fpc__image-item[data-v-90acafa8]:first-child {
+    position: relative
+}
+
+.fpc__img[data-v-90acafa8],.fpc__img-wrapper[data-v-90acafa8] {
+    height: 100%;
+    width: 100%
+}
+
+.fpc__img[data-v-90acafa8] {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.fpc__specs-wrapper[data-v-90acafa8] {
+    flex: 1 0 auto;
+    margin-top: 1.6666666667vw;
+    position: relative
+}
+
+@media (max-width: 860px) {
+    .fpc__specs-wrapper[data-v-90acafa8] {
+        margin-top:20px
+    }
+}
+
+.fpc__text[data-v-90acafa8] {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.fpc__text[data-v-90acafa8]:first-child {
+    position: relative
+}
+
+.fpc__title[data-v-90acafa8] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.6666666667vw;
+    font-weight: 500;
+    margin-bottom: 1.1111111111vw;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .fpc__title[data-v-90acafa8] {
+        font-size:24px;
+        margin-top: 8px
+    }
+}
+
+.fpc__specs[data-v-90acafa8] {
+    max-width: 12.2916666667vw
+}
+
+@media (max-width: 860px) {
+    .fpc__specs[data-v-90acafa8] {
+        max-width:190px
+    }
+}
+
+.fpc__specs .e-line {
+    line-height: .8em
+}
+
+@media (max-width: 860px) {
+    .fpc__specs .e-line {
+        line-height:1em
+    }
+}
+
+.fpc__spec[data-v-90acafa8] {
+    color: var(--neutral-200);
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.1111111111vw;
+    font-weight: 500;
+    line-height: 1em
+}
+
+@media (max-width: 860px) {
+    .fpc__spec[data-v-90acafa8] {
+        font-size:16px;
+        line-height: 1.2em
+    }
+}
+
+.fpc__icon[data-v-90acafa8] {
+    color: var(--accent-primary);
+    display: block;
+    margin-top: 1.1111111111vw
+}
+
+@media (max-width: 860px) {
+    .fpc__icon[data-v-90acafa8] {
+        margin-top:12px
+    }
+}
+
+.featured-projects__text[data-v-90acafa8] {
+    position: relative;
+    width: 30.5555555556vw;
+    z-index: 2
+}
+
+@media (max-width: 860px) {
+    .featured-projects__text[data-v-90acafa8] {
+        text-align:center;
+        width: 100%
+    }
+}
+
+.featured-projects__title[data-v-90acafa8] {
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 4.7222222222vw;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase
+}
+
+@media (max-width: 860px) {
+    .featured-projects__title[data-v-90acafa8] {
+        font-size:calc(24.73239px + 3.00469vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .featured-projects__title[data-v-90acafa8] {
+        font-size:36px
+    }
+}
+
+.featured-projects__desc[data-v-90acafa8] {
+    color: var(--neutral-200);
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.25vw;
+    font-weight: 500;
+    line-height: 1.22em;
+    margin-top: 1.1111111111vw
+}
+
+@media (max-width: 860px) {
+    .featured-projects__desc[data-v-90acafa8] {
+        font-size:calc(15.29577px + .18779vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .featured-projects__desc[data-v-90acafa8] {
+        font-size:16px
+    }
+}
+
+@media (max-width: 860px) {
+    .featured-projects__desc[data-v-90acafa8] {
+        display:none
+    }
+}
+
+.featured-projects__link[data-v-90acafa8] {
+    display: block;
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: .9722222222vw;
+    font-weight: 500;
+    line-height: 1em;
+    margin-top: 3.3333333333vw;
+    position: relative;
+    text-transform: uppercase;
+    width: -moz-fit-content;
+    width: fit-content;
+    z-index: 3
+}
+
+@media (max-width: 860px) {
+    .featured-projects__link[data-v-90acafa8] {
+        font-size:calc(8.59155px + .37559vw)
+    }
+}
+
+@media (max-width: 460px) {
+    .featured-projects__link[data-v-90acafa8] {
+        font-size:10px
+    }
+}
+
+@media (max-width: 860px) {
+    .featured-projects__link[data-v-90acafa8] {
+        font-family:HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        font-size: 1.1111111111vw;
+        font-weight: 500;
+        line-height: 1em
+    }
+}
+
+@media (max-width: 860px) and (max-width:860px) {
+    .featured-projects__link[data-v-90acafa8] {
+        font-size:calc(13.29577px + .18779vw)
+    }
+}
+
+@media (max-width: 860px) and (max-width:460px) {
+    .featured-projects__link[data-v-90acafa8] {
+        font-size:14px
+    }
+}
+
+@media (min-width: 860px) {
+    .featured-projects__link--mob[data-v-90acafa8] {
+        display:none
+    }
+}
+
+@media (max-width: 860px) {
+    .featured-projects__link[data-v-90acafa8] {
+        margin:8px auto 0
+    }
+
+    .featured-projects__link[data-v-90acafa8]:not(.featured-projects__link--mob) {
+        display: none
+    }
+}
