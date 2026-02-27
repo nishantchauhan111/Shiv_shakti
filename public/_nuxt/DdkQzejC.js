@@ -1,10 +1,10 @@
 import {u as s, b as a, e as u} from "./C5bBxmVo.js";
 const r = async () => {
     var o;
-    const e = s("components/footer", () => null);
+    const e = s("components/menu", () => null);
     try {
         if (!e.value) {
-            const t = await a("components/footer");
+            const t = await a("components/menu");
             e.value = t.value
         }
     } catch (t) {
@@ -17,5 +17,6 @@ const r = async () => {
     {
         story: e
     }
-};
+}
+;
 export {r as u};

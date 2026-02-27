@@ -417,9 +417,9 @@
             }
 
             .preloader {
+                display: none !important;
                 align-items: center;
                 background-color: var(--neutral-600);
-                display: flex;
                 height: 100vh;
                 justify-content: center;
                 left: 0;
@@ -6073,8 +6073,13 @@
         <%# <link rel="modulepreload" as="script" crossorigin href="/_nuxt/Dt8wSEj9.js"> %>
         <%# <link rel="modulepreload" as="script" crossorigin href="/_nuxt/DpMqWF5x.js"> %>
         <%# <link rel="modulepreload" as="script" crossorigin href="/_nuxt/B_pKfgL8.js"> %>
+        <link rel="modulepreload" as="script" crossorigin href="/_nuxt/C5bBxmVo.js">
         <link rel="modulepreload" as="script" crossorigin href="/_nuxt/3FyxhYft.js">
-        <%= javascript_include_tag "nuxt/3FyxhYft", type: "module", defer: true %>
+        <link rel="modulepreload" as="script" crossorigin href="/_nuxt/DsoqDRZR.js">
+        <link rel="modulepreload" as="script" crossorigin href="/_nuxt/DuVedMQ2.js">
+        <link rel="modulepreload" as="script" crossorigin href="/_nuxt/DdkQzejC.js">
+        <link rel="modulepreload" as="script" crossorigin href="/_nuxt/CdJ2rVPI.js">
+        <script type="module" src="/_nuxt/3FyxhYft.js"></script>
 
         <link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/_nuxt/builds/meta/5c96ae24-36a1-4d64-b583-1b22470b4a06.json">
         <%# <link rel="prefetch" as="script" crossorigin href="/_nuxt/DI5CiS_a.js"> baki%>
@@ -6117,9 +6122,7 @@
             <!---->
             <!---->
             <!--]-->
-            <div class="preloader">
-                <div class="preloader__dot"></div>
-            </div>
+            <!---->
             <div id="app" data-v-e34b4c09>
                 <div class="app-grid container grid" data-v-e34b4c09 data-v-60fcb63a>
                     <!--[-->
@@ -7045,7 +7048,7 @@ the form</h3>
             </div>
             <!--teleport anchor-->
         </div>
-        <script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__">
+        <script type="application/json" data-nuxt-data="nuxt-app" data-ssr="false" id="__NUXT_DATA__">
             [
                 [
                     "ShallowReactive",
@@ -7080,10 +7083,10 @@ the form</h3>
                     "$sisSlideModalOpened": 9,
                     "$sisFormModalOpened": 9,
                     "$sformModalFrom": 10,
-                    "$sisUseLoader": 11,
+                    "$sisUseLoader": 9,
                     "$sisFullPage": 9,
                     "$selRef": 12,
-                    "$sisFirstLoad": 11,
+                    "$sisFirstLoad": 9,
                     "$scomponents/global-meta": 13,
                     "$slang": 39,
                     "$stoasts": 40,
@@ -16678,10 +16681,10 @@ the form</h3>
         "/"
     ]</script>
 <script>
-    window.__NUXT__ = {};
+    window.__NUXT__ = { serverRendered: false };
     window.__NUXT__.config = {
         public: {
-            ENVIROMENT: "production",
+            ENVIROMENT: "development",
             value: "eyJGT1JNU1BSRUVfS0VZIjoibXdwb2F3Z2EifQ==",
             gtm: {
                 devtools: true,
@@ -16727,7 +16730,8 @@ the form</h3>
             buildId: "5c96ae24-36a1-4d64-b583-1b22470b4a06",
             buildAssetsDir: "/_nuxt/",
             cdnURL: ""
-        }
+        },
+        routeRules: {}
     }
 </script>
 </body>
