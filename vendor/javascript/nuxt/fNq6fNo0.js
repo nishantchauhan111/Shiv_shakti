@@ -29,7 +29,7 @@ const Ie = ["data-slide"]
                 "data-slide": e.index,
                 class: "scrolling-slider__item"
             }, [v(s, {
-                src: (o = e.item) == null ? void 0 : o.filename,
+                src: o.filename,
                 alt: (a = e.item) == null ? void 0 : a.alt,
                 width: 510
             }, null, 8, ["src", "alt"])], 8, Ie)

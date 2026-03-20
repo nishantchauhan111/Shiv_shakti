@@ -243,7 +243,7 @@ const ue = "https://a.storyblok.com"
       , w = $(r ? `fit-${r}` : "", g ? `${a}x${o}` : "", s ? "smart" : "", f ? "filters:" + f : "")
       , {pathname: _} = N(e);
     return {
-        url: U($(_, w ? "/m/" : "", w), i)
+        url: U($(_, w ? "/m/" : "", w))
     }
 }
   , ge = Object.freeze(Object.defineProperty({
@@ -292,13 +292,13 @@ const ue = "https://a.storyblok.com"
 };
 O.providers = {
     storyblok: {
-        provider: ge,
+        provider: '',
         defaults: {
-            baseURL: "https://a2.storyblok.com"
+            baseURL: ""
         }
     },
     vercel: {
-        provider: pe,
+        provider: '',
         defaults: {}
     }
 };

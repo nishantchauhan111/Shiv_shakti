@@ -64,7 +64,7 @@ const ys = M({
         }, [d("button", {
             class: "lang-switch__btn underline-reverse",
             onClick: l
-        }, $(p(t).toUpperCase()), 1), d("ul", {
+        }, $(""), 1), d("ul", {
             class: N(["lang-switch__list", p(s) && "lang-switch__list--opened"])
         }, [(k(!0),
         E(V, null, Y(p(n).filter(o => o !== p(t)), (o, u) => (k(),
@@ -72,7 +72,7 @@ const ys = M({
             key: u,
             class: "lang-switch__item",
             onClick: v => c(o)
-        }, [d("button", Ss, $(o.toUpperCase()), 1)], 8, xs))), 128))], 2)], 512))
+        }, [d("button", Ss, $('o.toUpperCase()'), 1)], 8, xs))), 128))], 2)], 512))
     }
 })
   , Es = D(ks, [["__scopeId", "data-v-46dca344"]])
@@ -655,7 +655,7 @@ const Ks = D(qs, [["render", Ns], ["__scopeId", "data-v-7aa2fc07"]])
                 _: 1
             }, 8, ["disabled"])], 32)]), d("div", fo, [r[2] || (r[2] = d("p", {
                 class: "footer__small-text"
-            }, "SID Thailand", -1)), r[3] || (r[3] = d("p", {
+            }, "SHIVSHAKTI GROUP", -1)), r[3] || (r[3] = d("p", {
                 class: "footer__small-text"
             }, "ALL RIGHTS RESERVED", -1)), T(S, {
                 to: `/${(we = (ye = (ge = (be = p(i)) == null ? void 0 : be.content) == null ? void 0 : ge.privacy_policy_link[0]) == null ? void 0 : ye.link) == null ? void 0 : we.cached_url}`,
