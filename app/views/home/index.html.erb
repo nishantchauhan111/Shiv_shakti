@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%= csrf_meta_tags %>
         <title>SID | We are building  the future of Bhavnagar</title>
         <style>
             a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
@@ -16738,6 +16739,48 @@ the form</h3>
         },
         routeRules: {}
     }
+</script>
+<script>
+  // Mirror every Formspree submission to our Rails backend, including quiz step answers.
+  (function () {
+    // Reads the aria-label of the selected radio button in a given quiz step (0-indexed).
+    function getQuizAnswer(stepIndex) {
+      var steps = document.querySelectorAll(".quiz-step");
+      if (!steps[stepIndex]) return "";
+      var activeBtn = steps[stepIndex].querySelector(".quiz-radio__circled-btn--active");
+      return activeBtn ? (activeBtn.getAttribute("aria-label") || "") : "";
+    }
+
+    var _origFetch = window.fetch;
+    window.fetch = function (url, options) {
+      if (typeof url === "string" && url.includes("formspree.io")) {
+        try {
+          var mirrorData = new FormData();
+          if (options && options.body instanceof FormData) {
+            options.body.forEach(function (value, key) {
+              mirrorData.append(key, value);
+            });
+          }
+          // Attach the three quiz step answers
+          mirrorData.append("purpose",            getQuizAnswer(0));
+          mirrorData.append("acquisition_period", getQuizAnswer(1));
+          mirrorData.append("budget",             getQuizAnswer(2));
+
+          var csrfToken = (document.querySelector('meta[name="csrf-token"]') || {}).content || "";
+          _origFetch("/quiz_submissions", {
+            method: "POST",
+            body: mirrorData,
+            headers: { "X-CSRF-Token": csrfToken }
+          }).catch(function (e) {
+            console.warn("Rails quiz submission failed:", e);
+          });
+        } catch (e) {
+          console.warn("Failed to mirror quiz submission to Rails:", e);
+        }
+      }
+      return _origFetch.apply(this, arguments);
+    };
+  })();
 </script>
 </body>
 </html>

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+  post "quiz_submissions", to: "quiz_submissions#create"
 
   # Silence Chrome DevTools auto-request
   get ".well-known/appspecific/com.chrome.devtools.json", to: proc { [204, {}, []] }
