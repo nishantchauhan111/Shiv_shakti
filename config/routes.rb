@@ -11,12 +11,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  get "projects" => "home#index"
+  get "projects" => "home#projects"
   get "about" => "home#about"
   get "consulting" => "home#consulting"
   get "contact" => "home#contact"
   get "news" => "home#news"
   post "quiz_submissions", to: "quiz_submissions#create"
+
+  # Proxy Storyblok CDN image requests (NuxtImg strips the domain, producing relative /f/... paths)
+  get "/f/*image_path", to: redirect { |params, _req| "https://a.storyblok.com/f/#{params[:image_path]}" }, format: false
 
   # Silence Chrome DevTools auto-request
   get ".well-known/appspecific/com.chrome.devtools.json", to: proc { [ 204, {}, [] ] }
