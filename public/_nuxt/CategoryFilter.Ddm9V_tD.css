@@ -1,0 +1,100 @@
+[data-v-688578a0]:root {
+    --basic-black: #202020;
+    --basic-white: #fff;
+    --neutral-100: #eaeaea;
+    --neutral-200: #d0d0d0;
+    --neutral-300: #818080;
+    --neutral-400: #4c4949;
+    --neutral-500: #343434;
+    --neutral-600: #2e2e2e;
+    --accent-primary: linear-gradient(180deg,#ffce7e,#997c4b);
+    --accent-secondary: #46361c;
+    --accent-tertiary: #635e50;
+    --accent-quaternary: #786f61;
+    --gradient-primary: linear-gradient(180deg,#202020,#343434 80%);
+    --gradient-secondary: linear-gradient(180deg,#3a3838,#202020);
+    --gradient-quaternary: linear-gradient(270deg,rgba(0,0,0,.6),transparent 50%,rgba(0,0,0,.6));
+    --white: #fff;
+    --red: #e73737;
+    --vh: 100vh;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #ced4da;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --status-success: #28a745;
+    --status-danger: #dc3545;
+    --status-warning: #ffc107;
+    --status-info: #3e3e3e
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NeueHalvetica55Roman.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: HelveticaNeueCyr;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NeueHalvetica55Medium.woff2) format("woff2")
+}
+
+.category-filter[data-v-688578a0] {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4.1666666667vw;
+    max-width: 62.5vw;
+    row-gap: .8333333333vw
+}
+
+@media (max-width: 860px) {
+    .category-filter[data-v-688578a0] {
+        flex-direction:column;
+        margin-top: 48px;
+        row-gap: 32px
+    }
+}
+
+.category-filter__item span[data-v-688578a0] {
+    color: currentColor;
+    margin: 0 1.3888888889vw
+}
+
+@media (max-width: 860px) {
+    .category-filter__item span[data-v-688578a0] {
+        display:none
+    }
+}
+
+.category-filter__btn[data-v-688578a0] {
+    background: transparent;
+    color: var(--basic-white);
+    font-family: HelveticaNeueCyr,HelveticaNeue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.3888888889vw;
+    font-weight: 500;
+    line-height: 1.2em;
+    position: relative;
+    text-transform: uppercase;
+    transition: color .3s ease
+}
+
+.category-filter__btn[data-v-688578a0]:before {
+    background-color: currentColor
+}
+
+@media (max-width: 860px) {
+    .category-filter__btn[data-v-688578a0] {
+        font-size:calc(11.88732px + .56338vw)
+    }
+}
