@@ -1,24 +1,25 @@
-import {r as n} from "./C5bBxmVo.js";
-const o = n(new Set());
-const e = n(null);
-const t = n("default");
-function r(i) {
-    const s = new Set(o.value);
-    s.add(i);
-    o.value = s;
-    t.value = "black";
+import {u as a} from "./C5bBxmVo.js";
+const d = () => {
+    const c = a("$headerRef", () => null)
+      , t = a("headerColor", () => "white")
+      , e = a("activeBlackSections", () => new Set)
+      , o = () => {
+        t.value = e.value.size > 0 ? "black" : "white"
+    }
+    ;
+    return {
+        $headerRef: c,
+        headerColor: t,
+        registerBlackHeaderTrigger: r => {
+            e.value.add(r),
+            o()
+        }
+        ,
+        unregisterBlackHeaderTrigger: r => {
+            e.value.delete(r),
+            o()
+        }
+    }
 }
-function s(i) {
-    const a = new Set(o.value);
-    a.delete(i);
-    o.value = a;
-    if (o.value.size === 0)
-        t.value = "default";
-}
-const u = () => ({
-    headerColor: t,
-    $headerRef: e,
-    registerBlackHeaderTrigger: r,
-    unregisterBlackHeaderTrigger: s
-});
-export {u};
+;
+export {d as u};
