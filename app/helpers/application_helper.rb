@@ -9,8 +9,8 @@ module ApplicationHelper
 
   def footer_img
     [
-      asset_path("tge.png"),
-      asset_path("portrait_1.png")
+      asset_path("foot_backdrop.png"),
+      asset_path("new_portrait.png")
     ]
   end
 

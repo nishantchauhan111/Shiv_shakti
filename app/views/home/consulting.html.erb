@@ -5990,7 +5990,7 @@
                 <div id="scroll-container" data-v-e34b4c09>
                     <!--[-->
                     <div class="app" data-v-e34b4c09>
-                        <header class="header container header--white" data-v-e34b4c09 data-v-2703eeef>
+                        <%# <header class="header container header--white" data-v-e34b4c09 data-v-2703eeef>
                             <div class="header__wrapper container" data-v-2703eeef>
                                 <div class="lang-switch" data-v-2703eeef data-v-46dca344>
                                     <button class="lang-switch__btn underline-reverse" data-v-46dca344>EN</button>
@@ -6030,7 +6030,7 @@
                                     <!--teleport end-->
                                 </div>
                             </div>
-                        </header>
+                        </header> %>
                         <main class="main-content" data-v-e34b4c09>
                             <!--[-->
                             <span data-v-b96758b3></span>
@@ -6679,10 +6679,10 @@ the form</h3>
                                         <div class="meetings__bar" data-v-df56d27b>
                                             <span data-v-df56d27b></span>
                                         </div>
-                                        <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" width="1920" alt data-nuxt-img class="custom-image custom-image--loading meetings__bg" data-v-df56d27b src="https://a2.storyblok.com/f/331817/1445x893/0ed3d3cb56/backdrop.jpg/m/10x10/filters:format(webp):quality(50)" data-v-565e5924>
+                                        <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" width="1920" alt data-nuxt-img class="custom-image custom-image--loading meetings__bg" data-v-df56d27b src="<%= footer_img[0] %>" data-v-565e5924>
                                         <div class="mettings__manager-wrapper" data-v-df56d27b>
                                             <div class="meetings__manager" data-v-df56d27b>
-                                                <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" width="536" height="793" alt data-nuxt-img class="custom-image custom-image--loading" data-v-df56d27b src="https://a2.storyblok.com/f/331817/536x793/1549ed7679/roman_vasylenko.png/m/10x10/filters:format(webp):quality(50)" data-v-565e5924>
+                                                <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" width="536" height="793" alt data-nuxt-img class="custom-image custom-image--loading" data-v-df56d27b src="<%= footer_img[1] %>" data-v-565e5924>
                                             </div>
                                         </div>
                                         <div class="meetings__content" data-v-df56d27b>
@@ -6698,10 +6698,10 @@ the form</h3>
                                                 <path d="M33.6429 2.29436V4.1266L57.373 17.6798V46.3489L33.6429 59.9012L33.6294 61.7425L58.9333 47.2839V16.7376L33.6429 2.29436Z" stroke-width="1" fill="currentColor"></path>
                                                 <!--]-->
                                             </svg>
-                                            <h2 class="meetings__title" data-v-df56d27b>We KNOW EVERYTHING YOU NEED aBOUT PHUKET PROPERTY</h2>
+                                            <h2 class="meetings__title" data-v-df56d27b><%= footer_lines[0] %></h2>
                                             <div class="meetings__about" data-v-df56d27b>
-                                                <h3 class="meetings__name" data-v-df56d27b>Roman Vasylenko</h3>
-                                                <p class="meetings__position" data-v-df56d27b>Head of Sales</p>
+                                                <h3 class="meetings__name" data-v-df56d27b><%= footer_lines[1] %></h3>
+                                                <p class="meetings__position" data-v-df56d27b><%= footer_lines[2] %></p>
                                             </div>
                                             <button type="button" class="btn btn--primary meetings__btn" data-v-df56d27b data-v-7d38ae27>
                                                 <!--[-->
@@ -6738,31 +6738,30 @@ the form</h3>
                                     <ul class="footer__list" data-v-6c725200>
                                         <li class="footer__item" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>OUR WORK SHEDULE: </h3>
-                                            <p class="footer__text" data-v-6c725200>Everyday  10 - 18</p>
+                                            <p class="footer__text" data-v-6c725200><%= contact[3] %></p>
                                         </li>
                                         <li class="footer__item" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>HOW TO FIND US IN</h3>
-                                            <a href="https://maps.app.goo.gl/QBdWZQ2R4wp9dS1y9" target="_blank" rel="noopener noreferrer" class="footer__text underline-reverse" data-v-6c725200>Google Maps</a>
+                                            <a href=<%= contact[2] %> target="_blank" rel="noopener noreferrer" class="footer__text underline-reverse" data-v-6c725200>Google Maps</a>
                                         </li>
                                     </ul>
                                     <div class="footer__list-wrapper" data-v-6c725200>
                                         <ul class="footer__list" data-v-6c725200>
                                             <li class="footer__item" data-v-6c725200>
                                                 <h3 class="footer__label" data-v-6c725200>Email</h3>
-                                                <a href="mailto:info@sidthailand.com" target="_blank" class="footer__text underline-reverse" data-v-6c725200>info@sidthailand.com</a>
+                                                <a href="mailto:<%= contact[0] %>" target="_blank" class="footer__text underline-reverse" data-v-6c725200><%= contact[0] %></a>
                                             </li>
                                             <li class="footer__item" data-v-6c725200>
                                                 <h3 class="footer__label" data-v-6c725200>WHATSAPP</h3>
-                                                <a href="tel:+66 61 401 89 25" class="footer__text underline-reverse" data-v-6c725200>+66 61 401 89 25</a>
+                                                <a href="tel:<%= contact[1] %>" class="footer__text underline-reverse" data-v-6c725200><%= contact[1] %></a>
                                             </li>
                                         </ul>
                                         <div class="footer__socials" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>join our socials: </h3>
                                             <!--[-->
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sidthailand/" class="footer__text underline-reverse" data-v-6c725200>INSTAGRAM</a>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/sidthailand/" class="footer__text underline-reverse" data-v-6c725200>LINKEDIN</a>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@sidthailand" class="footer__text underline-reverse" data-v-6c725200>YOUTUBE</a>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sidphuket" class="footer__text underline-reverse" data-v-6c725200>FACEBOOK</a>
+                                            <a target="_blank" rel="noopener noreferrer" href=<%= contact[6] %> class="footer__text underline-reverse" data-v-6c725200>INSTAGRAM</a>
+                                            <a target="_blank" rel="noopener noreferrer" href=<%= contact[4] %> class="footer__text underline-reverse" data-v-6c725200>LINKEDIN</a>
+                                            <a target="_blank" rel="noopener noreferrer" href=<%= contact[5] %> class="footer__text underline-reverse" data-v-6c725200>FACEBOOK</a>
                                             <!--]-->
                                         </div>
                                     </div>
@@ -6802,9 +6801,6 @@ the form</h3>
                                     <p class="footer__small-text" data-v-6c725200>SID Thailand</p>
                                     <p class="footer__small-text" data-v-6c725200>ALL RIGHTS RESERVED</p>
                                     <a href="/legal/privacy-policy" class="footer__small-text footer__small-text--link underline-reverse" data-v-6c725200>Privacy Policy Agreement</a>
-                                    <p class="footer__small-text" data-v-6c725200>
-                                        Made by <a href="https://growdient.com/" target="_blank" rel="noopener noreferrer" class="footer__small-text-link footer__small-text--link underline-reverse" data-v-6c725200>Growdient</a>
-                                    </p>
                                 </div>
                             </div>
                         </footer>
@@ -6856,16 +6852,13 @@ the form</h3>
                 <ul class="socials" data-v-0e596994 data-v-b300a249>
                     <!--[-->
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://wa.me/+66614018925" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Whatsapp</a>
+                        <a href="https://wa.me/<%= contact[1] %>" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Whatsapp</a>
                     </li>
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.instagram.com/sidthailand/" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Instagram</a>
+                        <a href="<%= contact[6] %>" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Instagram</a>
                     </li>
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.youtube.com/@sidthailand" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>YouTube</a>
-                    </li>
-                    <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.facebook.com/sidphuket" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Facebook</a>
+                        <a href="<%= contact[5] %>" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Facebook</a>
                     </li>
                     <!--]-->
                 </ul>
@@ -6971,7 +6964,7 @@ the form</h3>
                     "social_image": 25
                 },
                 "74d0e6d9-a9dd-467f-af91-6b021f14e392",
-                "SID | We are building  the future of Phuket",
+                "SHIVSHAKTI |  We are building  the future of Phuket",
                 "global_meta",
                 "We are company of the future that covers Phuket property market ON 360°",
                 {
@@ -7285,7 +7278,7 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 117
                 },
-                "https://wa.me/+66614018925",
+                "https://wa.me/<%= contact[1] %>",
                 "url",
                 "Whatsapp",
                 "link",
@@ -7304,7 +7297,7 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 124
                 },
-                "https://www.instagram.com/sidthailand/",
+                "<%= contact[6] %>",
                 "_blank",
                 "Instagram",
                 {
@@ -7322,8 +7315,8 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 130
                 },
-                "https://www.youtube.com/@sidthailand",
-                "YouTube",
+                "",
+                "",
                 {
                     "_uid": 133,
                     "link": 134,
@@ -7339,7 +7332,7 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 135
                 },
-                "https://www.facebook.com/sidphuket",
+                "<%= contact[5] %>",
                 "Facebook",
                 "components/menu",
                 -50,
@@ -7485,7 +7478,7 @@ the form</h3>
                     "backdrop_asset": 219
                 },
                 "bb94a0e1-07f3-44d0-9eec-46cd9926ef18",
-                "We KNOW EVERYTHING YOU NEED aBOUT PHUKET PROPERTY",
+                "<%= footer_lines[0] %>",
                 {
                     "name": 183,
                     "created_at": 184,
@@ -7512,7 +7505,7 @@ the form</h3>
                     "translated_slugs": 12,
                     "_stopResolving": 11
                 },
-                "Roman VASYLENKO",
+                "<%= footer_lines[1] %>",
                 "2025-03-31T11:15:49.244Z",
                 "2025-12-23T09:09:52.504Z",
                 "2025-12-23T09:09:52.515Z",
@@ -7531,7 +7524,7 @@ the form</h3>
                     "interview_position": 10
                 },
                 "56f6a67a-73a4-4faa-b4d9-e582801190bb",
-                "Roman Vasylenko",
+                "<%= footer_lines[1] %>",
                 [
                     193
                 ],
@@ -7568,7 +7561,7 @@ the form</h3>
                 "https://a.storyblok.com/f/331817/1920x1920/6b2f17e239/5.jpg",
                 {
                 },
-                "Head of Sales",
+                "<%= footer_lines[2] %>",
                 "team_member",
                 [
                 ],
@@ -7586,10 +7579,10 @@ the form</h3>
                     "is_external_url": 9
                 },
                 21617531,
-                "https://a.storyblok.com/f/331817/536x793/1549ed7679/roman_vasylenko.png",
+                "<%= footer_img[1] %>",
                 {
                 },
-                "roman-vasylenko",
+                "<%= footer_lines[2] %>",
                 "components/team/roman-vasylenko",
                 0,
                 [
@@ -7615,7 +7608,7 @@ the form</h3>
                     "is_external_url": 9
                 },
                 21811394,
-                "https://a.storyblok.com/f/331817/1445x893/0ed3d3cb56/backdrop.jpg",
+                "<%= footer_img[0] %>",
                 {
                 },
                 "components/cta/default",
@@ -14160,7 +14153,7 @@ the form</h3>
                             "fieldtype": 56,
                             "cached_url": 1668
                         },
-                        "https://www.youtube.com/@oleg.golubev.phuket",
+                        "",
                         {
                             "id": 1670,
                             "alt": 10,
@@ -15475,7 +15468,7 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 10
                                 },
-                                "Everyday  10 - 18",
+                                "<%= contact[3] %>",
                                 "OUR WORK SHEDULE",
                                 "contact_list_item",
                                 {
@@ -15503,7 +15496,7 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 2040
                                 },
-                                "https://maps.app.goo.gl/QBdWZQ2R4wp9dS1y9",
+                                "<%= contact[2] %>",
                                 "Google Maps",
                                 "HOW TO FIND US IN",
                                 {
@@ -15531,7 +15524,7 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 2049
                                 },
-                                "info@sidthailand.com",
+                                "<%= contact[0] %>",
                                 "email",
                                 "Email",
                                 {
@@ -15559,7 +15552,7 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 117
                                 },
-                                "+66 61 401 89 25",
+                                "<%= contact[1] %>",
                                 "WHATSAPP",
                                 {
                                     "_uid": 2061,
@@ -15605,7 +15598,7 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 2070
                                 },
-                                "https://www.linkedin.com/company/sidthailand/",
+                                "<%= contact[4] %>",
                                 "LINKEDIN",
                                 {
                                     "_uid": 2073,
@@ -15622,7 +15615,7 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 130
                                 },
-                                "YOUTUBE",
+                                "",
                                 {
                                     "_uid": 2077,
                                     "link": 2078,
@@ -15669,9 +15662,9 @@ the form</h3>
                                     "fieldtype": 56,
                                     "cached_url": 2094
                                 },
-                                "https://growdient.com/",
-                                "Growdient",
-                                "Made by",
+                                "",
+                                "",
+                                "",
                                 "Subscribe to  our newsletter",
                                 [
                                     2099
