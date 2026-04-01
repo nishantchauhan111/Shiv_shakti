@@ -4390,31 +4390,30 @@
                                     <ul class="footer__list" data-v-6c725200>
                                         <li class="footer__item" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>OUR WORK SHEDULE: </h3>
-                                            <p class="footer__text" data-v-6c725200>Everyday  10 - 18</p>
+                                            <p class="footer__text" data-v-6c725200><%= contact[3] %></p>
                                         </li>
                                         <li class="footer__item" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>HOW TO FIND US IN</h3>
-                                            <a href="https://maps.app.goo.gl/QBdWZQ2R4wp9dS1y9" target="_blank" rel="noopener noreferrer" class="footer__text underline-reverse" data-v-6c725200>Google Maps</a>
+                                            <a href=<%= contact[2] %> target="_blank" rel="noopener noreferrer" class="footer__text underline-reverse" data-v-6c725200>Google Maps</a>
                                         </li>
                                     </ul>
                                     <div class="footer__list-wrapper" data-v-6c725200>
                                         <ul class="footer__list" data-v-6c725200>
                                             <li class="footer__item" data-v-6c725200>
                                                 <h3 class="footer__label" data-v-6c725200>Email</h3>
-                                                <a href="mailto:info@sidthailand.com" target="_blank" class="footer__text underline-reverse" data-v-6c725200>info@sidthailand.com</a>
+                                                <a href=<%= contact[0] %> target="_blank" class="footer__text underline-reverse" data-v-6c725200><%= contact[0] %></a>
                                             </li>
                                             <li class="footer__item" data-v-6c725200>
                                                 <h3 class="footer__label" data-v-6c725200>WHATSAPP</h3>
-                                                <a href="tel:+66 61 401 89 25" class="footer__text underline-reverse" data-v-6c725200>+66 61 401 89 25</a>
+                                                <a href="tel:<%= contact[1] %>" class="footer__text underline-reverse" data-v-6c725200><%= contact[1] %></a>
                                             </li>
                                         </ul>
                                         <div class="footer__socials" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>join our socials: </h3>
                                             <!--[-->
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sidthailand/" class="footer__text underline-reverse" data-v-6c725200>INSTAGRAM</a>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/sidthailand/" class="footer__text underline-reverse" data-v-6c725200>LINKEDIN</a>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@sidthailand" class="footer__text underline-reverse" data-v-6c725200>YOUTUBE</a>
-                                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sidphuket" class="footer__text underline-reverse" data-v-6c725200>FACEBOOK</a>
+                                            <a target="_blank" rel="noopener noreferrer" href=<%= contact[6] %> class="footer__text underline-reverse" data-v-6c725200>INSTAGRAM</a>
+                                            <a target="_blank" rel="noopener noreferrer" href=<%= contact[4] %> class="footer__text underline-reverse" data-v-6c725200>LINKEDIN</a>
+                                            <a target="_blank" rel="noopener noreferrer" href=<%= contact[5] %> class="footer__text underline-reverse" data-v-6c725200>FACEBOOK</a>
                                             <!--]-->
                                         </div>
                                     </div>
@@ -4454,9 +4453,6 @@
                                     <p class="footer__small-text" data-v-6c725200>SID Thailand</p>
                                     <p class="footer__small-text" data-v-6c725200>ALL RIGHTS RESERVED</p>
                                     <a href="/legal/privacy-policy" class="footer__small-text footer__small-text--link underline-reverse" data-v-6c725200>Privacy Policy Agreement</a>
-                                    <p class="footer__small-text" data-v-6c725200>
-                                        Made by <a href="https://growdient.com/" target="_blank" rel="noopener noreferrer" class="footer__small-text-link footer__small-text--link underline-reverse" data-v-6c725200>Growdient</a>
-                                    </p>
                                 </div>
                             </div>
                         </footer>
@@ -4511,13 +4507,10 @@
                         <a href="https://wa.me/+66614018925" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Whatsapp</a>
                     </li>
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.instagram.com/sidthailand/" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Instagram</a>
+                        <a href="<%= contact[6] %>" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Instagram</a>
                     </li>
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.youtube.com/@sidthailand" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>YouTube</a>
-                    </li>
-                    <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.facebook.com/sidphuket" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Facebook</a>
+                        <a href=<%= contact[5] %> target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Facebook</a>
                     </li>
                     <!--]-->
                 </ul>
@@ -4958,7 +4951,7 @@
                     "fieldtype": 56,
                     "cached_url": 125
                 },
-                "https://www.instagram.com/sidthailand/",
+                "<%= contact[6] %>",
                 "_blank",
                 "Instagram",
                 {
@@ -4976,8 +4969,8 @@
                     "fieldtype": 56,
                     "cached_url": 131
                 },
-                "https://www.youtube.com/@sidthailand",
-                "YouTube",
+                "",
+                "",
                 {
                     "_uid": 134,
                     "link": 135,
@@ -5149,7 +5142,7 @@
                     "backdrop_asset": 220
                 },
                 "bb94a0e1-07f3-44d0-9eec-46cd9926ef18",
-                "We KNOW EVERYTHING YOU NEED aBOUT PHUKET PROPERTY",
+                "<%= footer_lines[0] %>",
                 {
                     "name": 184,
                     "created_at": 185,
@@ -5176,7 +5169,7 @@
                     "translated_slugs": 12,
                     "_stopResolving": 11
                 },
-                "Roman VASYLENKO",
+                "<%= footer_lines[1] %>",
                 "2025-03-31T11:15:49.244Z",
                 "2025-12-23T09:09:52.504Z",
                 "2025-12-23T09:09:52.515Z",
@@ -5195,7 +5188,7 @@
                     "interview_position": 10
                 },
                 "56f6a67a-73a4-4faa-b4d9-e582801190bb",
-                "Roman Vasylenko",
+                "<%= footer_lines[1] %>",
                 [
                     194
                 ],
@@ -5231,7 +5224,7 @@
             "https://a.storyblok.com/f/331817/1920x1920/6b2f17e239/5.jpg",
             {
             },
-            "Head of Sales",
+            "<%= footer_lines[2] %>",
             "team_member",
             [
             ],
@@ -5249,10 +5242,10 @@
                 "is_external_url": 9
             },
             21617531,
-            "https://a.storyblok.com/f/331817/536x793/1549ed7679/roman_vasylenko.png",
+            "<%= footer_img[1] %>",
             {
             },
-            "roman-vasylenko",
+            "<%= footer_lines[1] %>",
             "components/team/roman-vasylenko",
             0,
             [
@@ -5278,7 +5271,7 @@
                 "is_external_url": 9
             },
             21811394,
-            "https://a.storyblok.com/f/331817/1445x893/0ed3d3cb56/backdrop.jpg",
+            "<%= footer_img[0] %>",
             {
             },
             "components/cta/default",
@@ -5308,11 +5301,11 @@
                 "is_external_url": 9
             },
             22154162,
-            "https://a.storyblok.com/f/331817/1920x1080/6fab32127b/sid_exterior_6.jpg",
+            "<%= asset_path('TGI_top.png') %>",
             {
             },
-            "Discover our ongoing and completed projects to see how we bring to life the concepts that are shaping the future of real estate in Phuket.",
-            "All projects",
+            "Discover our ongoing and completed projects to see how we bring to life the concepts that are shaping the future of real estate in Gujarat.",
+            "Ongoing",
             "Go to Project",
             "More",
             "Area",
@@ -5460,7 +5453,7 @@
                 "fieldtype": 56,
                 "cached_url": 10
             },
-            "Everyday  10 - 18",
+            "<%= contact[3] %>",
             "OUR WORK SHEDULE",
             "contact_list_item",
             {
@@ -5488,7 +5481,7 @@
                 "fieldtype": 56,
                 "cached_url": 292
             },
-            "https://maps.app.goo.gl/QBdWZQ2R4wp9dS1y9",
+            "<%= contact[2] %>",
             "Google Maps",
             "HOW TO FIND US IN",
             {
@@ -5516,7 +5509,7 @@
                 "fieldtype": 56,
                 "cached_url": 301
             },
-            "info@sidthailand.com",
+            "<%= contact[0] %>",
             "email",
             "Email",
             {
@@ -5544,7 +5537,7 @@
                 "fieldtype": 56,
                 "cached_url": 118
             },
-            "+66 61 401 89 25",
+            "<%= contact[1] %>",
             "WHATSAPP",
             {
                 "_uid": 313,
@@ -5590,7 +5583,7 @@
                 "fieldtype": 56,
                 "cached_url": 322
             },
-            "https://www.linkedin.com/company/sidthailand/",
+            "<%= contact[4] %>",
             "LINKEDIN",
             {
                 "_uid": 325,
@@ -5607,7 +5600,7 @@
                 "fieldtype": 56,
                 "cached_url": 131
             },
-            "YOUTUBE",
+            "",
             {
                 "_uid": 329,
                 "link": 330,
@@ -5655,9 +5648,9 @@
                 "fieldtype": 56,
                 "cached_url": 347
             },
-            "https://growdient.com/",
-            "Growdient",
-            "Made by",
+            "",
+            "",
+            "",
             "Subscribe to  our newsletter",
             [
                 352
@@ -7165,7 +7158,7 @@
     "translated_slugs": 12,
     "_stopResolving": 11
 },
-"condos",
+"Completed",
 "2025-05-21T10:21:59.020Z",
 "2025-06-05T06:58:50.849Z",
 "2025-06-05T06:58:50.865Z",
@@ -7177,7 +7170,7 @@
     "component": 723
 },
 "cf0e5055-da8c-488a-ad5f-cb40ec1fb988",
-"Condos",
+"Completed",
 "projects_cat",
 "consultancy-projects/categories/condos",
 [
@@ -11748,7 +11741,7 @@
                 "translated_slugs": 12,
                 "_stopResolving": 11
             },
-            "villas",
+            "Up-Comming",
             "2025-06-05T06:58:29.457Z",
             "2025-06-05T06:58:29.476Z",
             674479630,
@@ -11759,7 +11752,7 @@
                 "component": 723
             },
             "c6cfff21-a6b9-4079-9678-bb9953aa1eaa",
-            "Villas",
+            "Up-Comming",
             "consultancy-projects/categories/villas",
             [
             ],

@@ -6876,9 +6876,9 @@ the form</h3>
                                                 <path d="M33.6429 2.29436V4.1266L57.373 17.6798V46.3489L33.6429 59.9012L33.6294 61.7425L58.9333 47.2839V16.7376L33.6429 2.29436Z" stroke-width="1" fill="currentColor"></path>
                                                 <!--]-->
                                             </svg>
-                                            <h2 class="meetings__title" data-v-df56d27b>We KNOW EVERYTHING YOU NEED aBOUT PHUKET PROPERTY</h2>
+                                            <h2 class="meetings__title" data-v-df56d27b><%= footer_lines[0] %></h2>
                                             <div class="meetings__about" data-v-df56d27b>
-                                                <h3 class="meetings__name" data-v-df56d27b>Roman Vasylenko</h3>
+                                                <h3 class="meetings__name" data-v-df56d27b><%= footer_lines[1] %></h3>
                                                 <p class="meetings__position" data-v-df56d27b>Head of Sales</p>
                                             </div>
                                             <button type="button" class="btn btn--primary meetings__btn" data-v-df56d27b data-v-7d38ae27>
@@ -6916,11 +6916,11 @@ the form</h3>
                                     <ul class="footer__list" data-v-6c725200>
                                         <li class="footer__item" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>OUR WORK SHEDULE: </h3>
-                                            <p class="footer__text" data-v-6c725200>Everyday  10 - 18</p>
+                                            <p class="footer__text" data-v-6c725200><%= contact[3] %></p>
                                         </li>
                                         <li class="footer__item" data-v-6c725200>
                                             <h3 class="footer__label" data-v-6c725200>HOW TO FIND US IN</h3>
-                                            <a href="https://share.google/7sbwZQlDz2kyGZmdW" target="_blank" rel="noopener noreferrer" class="footer__text underline-reverse" data-v-6c725200>Google Maps</a>
+                                            <a href="<%= contact[2] %> target="_blank" rel="noopener noreferrer" class="footer__text underline-reverse" data-v-6c725200>Google Maps</a>
                                         </li>
                                     </ul>
                                     <div class="footer__list-wrapper" data-v-6c725200>
@@ -7034,16 +7034,13 @@ the form</h3>
                 <ul class="socials" data-v-0e596994 data-v-b300a249>
                     <!--[-->
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://wa.me/+919023187500" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Whatsapp</a>
+                        <a href="https://wa.me/<%= contact[2] %>" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Whatsapp</a>
                     </li>
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.instagram.com/shivshaktii_group/" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Instagram</a>
+                        <a href=<%= contact[6] %> target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Instagram</a>
                     </li>
                     <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.youtube.com/@sidthailand" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>YouTube</a>
-                    </li>
-                    <li class="socials__item" data-v-b300a249>
-                        <a href="https://www.facebook.com/sidphuket" target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Facebook</a>
+                        <a href=<%= contact[5] %> target="_blank" rel="noopener noreferrer" class="socials__link underline-reverse" data-v-b300a249>Facebook</a>
                     </li>
                     <!--]-->
                 </ul>
@@ -7463,7 +7460,7 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 118
                 },
-                "https://wa.me/+919023187500",
+                "https://wa.me/<%= contact[1] %>",
                 "url",
                 "Whatsapp",
                 "link",
@@ -7482,7 +7479,7 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 125
                 },
-                "https://www.instagram.com/shivshaktii_group/",
+                "<%= contact[6] %>",
                 "_blank",
                 "Instagram",
                 {
@@ -7500,8 +7497,8 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 131
                 },
-                "https://www.youtube.com/@sidthailand",
-                "YouTube",
+                "",
+                "",
                 {
                     "_uid": 134,
                     "link": 135,
@@ -7517,7 +7514,7 @@ the form</h3>
                     "fieldtype": 56,
                     "cached_url": 136
                 },
-                "https://www.facebook.com/sidphuket",
+                "<%= contact[5] %>",
                 "Facebook",
                 "components/menu",
                 -50,
@@ -7663,7 +7660,7 @@ the form</h3>
                     "backdrop_asset": 219
                 },
                 "bb94a0e1-07f3-44d0-9eec-46cd9926ef18",
-                "We KNOW EVERYTHING YOU NEED aBOUT PROPERTY",
+                "<%= footer_lines[0] %>",
                 {
                     "name": 183,
                     "created_at": 184,
@@ -7690,7 +7687,7 @@ the form</h3>
                     "translated_slugs": 12,
                     "_stopResolving": 11
                 },
-                "Mr. Kuldeepsinh Gohil",
+                "<%= footer_lines[1] %>",
                 "2025-03-31T11:15:49.244Z",
                 "2025-12-23T09:09:52.504Z",
                 "2025-12-23T09:09:52.515Z",
@@ -7709,7 +7706,7 @@ the form</h3>
                     "interview_position": 10
                 },
                 "56f6a67a-73a4-4faa-b4d9-e582801190bb",
-                "Mr. Kuldeepsinh Gohil",
+                "<%= footer_lines[1] %>",
                 [
                     193
                 ],
@@ -7743,10 +7740,10 @@ the form</h3>
                     "is_external_url": 9
                 },
                 22955696,
-                "<%= asset_path('portrait_1.png') %>",
+                "<%= footer_img[1] %>",
                 {
                 },
-                "Founder Shivshakti group",
+                "<%= footer_lines[2] %>",
                 "team_member",
                 [
                 ],
@@ -7767,7 +7764,7 @@ the form</h3>
                 "<%= asset_path('portrait_1.png') %>",
                 {
                 },
-                "roman-vasylenko",
+                "<%= footer_lines[1] %>",
                 "components/team/roman-vasylenko",
                 0,
                 [
@@ -7793,7 +7790,7 @@ the form</h3>
                     "is_external_url": 9
                 },
                 21811394,
-                "<%= asset_path('tge.png') %>",
+                "<%= footer_img[0] %>",
                 {
                 },
                 "components/cta/default",
@@ -16443,7 +16440,7 @@ the form</h3>
             "fieldtype": 56,
             "cached_url": 10
         },
-        "Everyday  10 - 18",
+        "<%= contact[3] %>",
         "OUR WORK SHEDULE",
         "contact_list_item",
         {
@@ -16471,7 +16468,7 @@ the form</h3>
             "fieldtype": 56,
             "cached_url": 2222
         },
-        "https://share.google/7sbwZQlDz2kyGZmdW",
+        "<%= contact[2] %>",
         "Google Maps",
         "HOW TO FIND US IN",
         {
@@ -16499,7 +16496,7 @@ the form</h3>
             "fieldtype": 56,
             "cached_url": 2231
         },
-        "shivshaktigroup@gmail.com",
+        "<%= contact[0] %>",
         "email",
         "Email",
         {
@@ -16527,7 +16524,7 @@ the form</h3>
             "fieldtype": 56,
             "cached_url": 118
         },
-        "+91 9023187500",
+        "<%= contact[1] %>",
         "WHATSAPP",
         {
             "_uid": 2243,
@@ -16573,7 +16570,7 @@ the form</h3>
             "fieldtype": 56,
             "cached_url": 2252
         },
-        "https://www.linkedin.com/company/sidthailand/",
+        "<%= contact[4] %>",
         "LINKEDIN",
         {
             "_uid": 2255,
@@ -16590,7 +16587,7 @@ the form</h3>
             "fieldtype": 56,
             "cached_url": 131
         },
-        "YOUTUBE",
+        "",
         {
             "_uid": 2259,
             "link": 2260,
