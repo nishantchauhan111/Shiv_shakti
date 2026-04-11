@@ -4154,19 +4154,16 @@
                                             <p data-t class="projects-hero__description" data-v-f3356013>Discover our ongoing and completed projects to see how we bring to life the concepts that are shaping the future of real estate in Phuket.</p>
                                             <ul class="category-filter" data-t data-v-f3356013 data-v-688578a0>
                                                 <li class="category-filter__item--active category-filter__item" data-v-688578a0>
-                                                    <button type="button" class="underline--active category-filter__btn underline" data-v-688578a0>All projects</button>
-                                                    <span role="separator" aria-orientation="vertical" data-v-688578a0>|</span>
-                                                </li>
-                                                <!--[-->
-                                                <li class="category-filter__item" data-v-688578a0>
-                                                    <button type="button" class="category-filter__btn underline" data-v-688578a0>Condos</button>
+                                                    <button type="button" class="underline--active category-filter__btn underline" data-filter="ongoing" data-v-688578a0>ONGOING</button>
                                                     <span role="separator" aria-orientation="vertical" data-v-688578a0>|</span>
                                                 </li>
                                                 <li class="category-filter__item" data-v-688578a0>
-                                                    <button type="button" class="category-filter__btn underline" data-v-688578a0>Villas</button>
-                                                    <!---->
+                                                    <button type="button" class="category-filter__btn underline" data-filter="completed" data-v-688578a0>COMPLETED</button>
+                                                    <span role="separator" aria-orientation="vertical" data-v-688578a0>|</span>
                                                 </li>
-                                                <!--]-->
+                                                <li class="category-filter__item" data-v-688578a0>
+                                                    <button type="button" class="category-filter__btn underline" data-filter="upcoming" data-v-688578a0>UPCOMING</button>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -4252,36 +4249,16 @@
                                                     <div class="projects__text-wrapper" data-v-00c1618f>
                                                         <!--[-->
                                                         <div class="projects__text" style="position:relative;" data-v-00c1618f>
-                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>Golden Empire</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Premium residences designed for comfort, privacy, and long-term living</p>
+                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>The Golden Empire</h2>
+                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Under construction luxury residential project in prime location</p>
                                                         </div>
                                                         <div class="projects__text" style="position:absolute;" data-v-00c1618f>
                                                             <h2 data-f-title class="projects__title" data-v-00c1618f>Aawad Empire</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>High-yield investment apartments, ideal for short-term rentals and vacation stays</p>
+                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Modern residential complex with premium amenities and facilities</p>
                                                         </div>
                                                         <div class="projects__text" style="position:absolute;" data-v-00c1618f>
                                                             <h2 data-f-title class="projects__title" data-v-00c1618f>Madhavbag</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Elegant townhouses with two bedrooms and lake views, striking a balance between nature and urban lifestyle</p>
-                                                        </div>
-                                                        <div class="projects__text" style="position:absolute;" data-v-00c1618f>
-                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>Urban Scapes Layan Ph1</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Stylish city villas with 3 bedrooms and private pools, perfect for family living or holiday homes</p>
-                                                        </div>
-                                                        <div class="projects__text" style="position:absolute;" data-v-00c1618f>
-                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>Urban Scapes Layan Ph2</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Stylish 3 bedroom urban villas with private pools, ideal for family living and relaxation</p>
-                                                        </div>
-                                                        <div class="projects__text" style="position:absolute;" data-v-00c1618f>
-                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>Diamond Resort Phuket</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Residential and resort complex in the prestigious Bang Tao area</p>
-                                                        </div>
-                                                        <div class="projects__text" style="position:absolute;" data-v-00c1618f>
-                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>The Momentum DISTRICT</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>New point of attraction in Phuket, located in the scenic Layan Beach area</p>
-                                                        </div>
-                                                        <div class="projects__text" style="position:absolute;" data-v-00c1618f>
-                                                            <h2 data-f-title class="projects__title" data-v-00c1618f>Serene Condo Surin</h2>
-                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Investment eco-condominium located near Surin and Bang Tao beaches</p>
+                                                            <p data-f-text class="projects__desc" data-v-00c1618f>Premium township with world-class infrastructure and green spaces</p>
                                                         </div>
                                                         <!--]-->
                                                     </div>
@@ -13977,6 +13954,469 @@
                 },
                 "/projects/"
             ]</script>
+        <script>
+        /* ===== PROJECTS FILTER OVERRIDE =====
+           Replaces Nuxt/Storyblok category system with correct filtering
+           for all 11 Shiv Shakti projects.
+
+           Animation matches the original GSAP slider:
+             Backgrounds / image-items : direction-aware clip-path wipe
+             Images                    : scale 1.3 → 1 zoom effect
+             Text items                : translateY + opacity fade
+        ===================================== */
+        (function () {
+            'use strict';
+
+            /* ── Project data ─────────────────────────────────────── */
+            var PROJECTS = {
+                ongoing: [
+                    {
+                        slug: 'golden-empire',
+                        title: 'The Golden Empire',
+                        desc: 'Under construction luxury residential project in prime location',
+                        img: '<%= asset_path("tge.png") %>'
+                    },
+                    {
+                        slug: 'aawad-empire',
+                        title: 'Aawad Empire',
+                        desc: 'Modern residential complex with premium amenities and facilities',
+                        img: '<%= asset_path("project/awad_empire.png") %>'
+                    },
+                    {
+                        slug: 'madhavbag',
+                        title: 'Madhavbag',
+                        desc: 'Premium township with world-class infrastructure and green spaces',
+                        img: '<%= asset_path("project/madhavbag.png") %>'
+                    }
+                ],
+                completed: [
+                    {
+                        slug: 'alaknanda',
+                        title: 'Alaknanda',
+                        desc: 'A successfully completed residential project with excellent connectivity',
+                        img: '<%= asset_path("TGI_top.png") %>'
+                    },
+                    {
+                        slug: 'luxuria-gold',
+                        title: 'Luxuria Gold',
+                        desc: 'Gold-standard residential development with superior finishes and design',
+                        img: '<%= asset_path("golden_backdrop.png") %>'
+                    },
+                    {
+                        slug: 'luxuria-platinum',
+                        title: 'Luxuria Platinum',
+                        desc: 'Platinum class residences with world-class amenities and panoramic views',
+                        img: '<%= asset_path("luxuria_platinum.png") %>'
+                    },
+                    {
+                        slug: 'shiv-shakti-blessing',
+                        title: 'Shiv Shakti Blessing',
+                        desc: 'A blessed community offering divine living experience with modern comforts',
+                        img: '<%= asset_path("scl_1.jpg") %>'
+                    },
+                    {
+                        slug: 'shiv-shakti-luxuria',
+                        title: 'Shiv Shakti Luxuria',
+                        desc: 'Luxurious residences with elegant design and premium lifestyle amenities',
+                        img: '<%= asset_path("shiv_shakti_luxuria.png") %>'
+                    },
+                    {
+                        slug: 'luxuria-crystal',
+                        title: 'Luxuria Crystal',
+                        desc: 'Crystal standard of premium living with transparent quality and craftsmanship',
+                        img: '<%= asset_path("luxuria_crystel.png") %>'
+                    }
+                ],
+                upcoming: [
+                    {
+                        slug: 'golden-plaza',
+                        title: 'Golden Plaza',
+                        desc: 'An upcoming landmark commercial and residential development in prime location',
+                        img: '<%= asset_path("golden_plaza.png") %>'
+                    },
+                    {
+                        slug: 'the-empire',
+                        title: 'The Empire',
+                        desc: 'Future landmark development setting new benchmarks in luxury living',
+                        img: '<%= asset_path("the_empire_kalanala.png") %>'
+                    }
+                ]
+            };
+
+            /* ── State ─────────────────────────────────────────────── */
+            var currentCategory = 'ongoing';
+            var currentIndex    = 0;
+            var isAnimating     = false;
+
+            /* Animation constants matching original GSAP timeline */
+            var DUR  = 1.3;   /* seconds — matches GSAP defaults.duration */
+            var EASE = 'cubic-bezier(0.25, 1, 0.5, 1)'; /* ≈ power1.out */
+
+            var CLIP_VISIBLE     = 'inset(0 0% 0 0%)';
+            var CLIP_HIDE_RIGHT  = 'inset(0 0 0 100%)'; /* slide out to right / enter from right */
+            var CLIP_HIDE_LEFT   = 'inset(0 100% 0 0)'; /* slide out to left  / enter from left  */
+
+            function getProjects(cat) {
+                return PROJECTS[cat] || PROJECTS.ongoing;
+            }
+
+            /* ── Build HTML matching original SSR structure exactly ── */
+            function bgHTML(p, i) {
+                /* Background wrappers are position:absolute via CSS.
+                   data-f-bg-i on the img is needed for the scale animation selector. */
+                return '<div data-f-bg' +
+                    ' class="' + (i === 0 ? 'active ' : '') + 'projects__bg-wrapper"' +
+                    ' data-v-00c1618f>' +
+                    '<img onerror="this.setAttribute(\'data-error\',1)" width="1920" alt' +
+                    ' data-nuxt-img class="custom-image projects__bg" data-f-bg-i' +
+                    ' data-v-00c1618f src="' + p.img + '" data-v-565e5924>' +
+                    '</div>';
+            }
+
+            function imgHTML(p, i) {
+                /* First item is position:relative (sets slider height), rest absolute. */
+                return '<div data-f-img' +
+                    ' class="' + (i === 0 ? 'active ' : '') + 'projects__image-item"' +
+                    ' style="position:' + (i === 0 ? 'relative' : 'absolute') + ';"' +
+                    ' data-v-00c1618f>' +
+                    '<div class="projects__img-wrapper" data-f-img-i data-v-00c1618f>' +
+                    '<img onerror="this.setAttribute(\'data-error\',1)" width="1920" alt' +
+                    ' data-nuxt-img class="custom-image projects__img" data-t-img' +
+                    ' data-slug="' + p.slug + '" data-v-00c1618f src="' + p.img + '"' +
+                    ' data-v-565e5924>' +
+                    '</div></div>';
+            }
+
+            function textHTML(p, i) {
+                /* All text items are position:absolute stacked — CSS rule forces this.
+                   We control visibility via opacity + translateY. */
+                return '<div class="projects__text"' +
+                    ' style="position:' + (i === 0 ? 'relative' : 'absolute') + ';"' +
+                    ' data-v-00c1618f>' +
+                    '<h2 data-f-title class="projects__title" data-v-00c1618f>' +
+                    p.title + '</h2>' +
+                    '<p data-f-text class="projects__desc" data-v-00c1618f>' +
+                    p.desc + '</p>' +
+                    '</div>';
+            }
+
+            /* ── Set a CSS property immediately (no transition) ─────── */
+            function setNow(el, prop, val) {
+                if (!el) return;
+                el.style[prop] = val;
+            }
+
+            /* ── Force layout flush so transition picks up from state ─ */
+            function flush() {
+                document.querySelector('.projects__bgs').getBoundingClientRect();
+            }
+
+            /* ── Apply transition string ────────────────────────────── */
+            function transition(el, props, dur, delay) {
+                if (!el) return;
+                var t = props.map(function (p) {
+                    return p + ' ' + dur + 's ' + (delay ? delay + 's ' : '') + EASE;
+                }).join(', ');
+                el.style.transition = t;
+            }
+
+            /* ── Initialize states immediately after rebuild (no anim) */
+            function initSliderStates() {
+                var bgs      = [].slice.call(document.querySelectorAll('.projects__bgs [data-f-bg]'));
+                var bgImgs   = [].slice.call(document.querySelectorAll('.projects__bgs [data-f-bg-i]'));
+                var imgs     = [].slice.call(document.querySelectorAll('[data-t-assets] [data-f-img]'));
+                var imgInner = [].slice.call(document.querySelectorAll('[data-t-assets] [data-f-img-i]'));
+                var texts    = [].slice.call(document.querySelectorAll('.projects__text-wrapper .projects__text'));
+
+                bgs.forEach(function (el, i) {
+                    el.style.transition = 'none';
+                    el.style.clipPath   = i === 0 ? CLIP_VISIBLE : CLIP_HIDE_RIGHT;
+                });
+                bgImgs.forEach(function (el, i) {
+                    el.style.transition = 'none';
+                    el.style.transform  = i === 0 ? 'scale(1)' : 'scale(1.3)';
+                });
+                imgs.forEach(function (el, i) {
+                    el.style.transition = 'none';
+                    el.style.clipPath   = i === 0 ? CLIP_VISIBLE : CLIP_HIDE_RIGHT;
+                });
+                imgInner.forEach(function (el, i) {
+                    el.style.transition = 'none';
+                    el.style.transform  = i === 0 ? 'scale(1)' : 'scale(1.3)';
+                });
+                texts.forEach(function (el, i) {
+                    el.style.transition = 'none';
+                    el.style.opacity    = i === 0 ? '1' : '0';
+                    el.style.transform  = i === 0 ? 'translateY(0)' : 'translateY(20px)';
+                });
+            }
+
+            /* ── Rebuild entire slider for a project list ──────────── */
+            function rebuildSlider(projects) {
+                var bgsEl    = document.querySelector('.projects__bgs');
+                var assetsEl = document.querySelector('[data-t-assets]');
+                var textEl   = document.querySelector('.projects__text-wrapper');
+                var card     = document.querySelector('.projects__card');
+                var link     = document.querySelector('.projects__link');
+
+                if (!bgsEl || !assetsEl || !textEl) return false;
+
+                bgsEl.innerHTML    = '<!--[-->' + projects.map(bgHTML).join('') + '<!--]-->';
+                assetsEl.innerHTML = '<!--[-->' + projects.map(imgHTML).join('') + '<!--]-->';
+                textEl.innerHTML   = '<!--[-->' + projects.map(textHTML).join('') + '<!--]-->';
+
+                /* Update card slug and link href for first project */
+                if (card && projects[0]) {
+                    card.setAttribute('data-slug', projects[0].slug);
+                }
+                if (link && projects[0]) {
+                    link.href = '/projects/' + projects[0].slug;
+                }
+
+                /* Set initial visual states (no animation) */
+                initSliderStates();
+                return true;
+            }
+
+            /* ── Navigate to prev / next slide ────────────────────── */
+            function navigate(dir) {
+                if (isAnimating) return;
+
+                var projects = getProjects(currentCategory);
+                if (projects.length < 2) return;
+
+                isAnimating = true;
+
+                var prevIndex = currentIndex;
+                currentIndex  = (currentIndex + dir + projects.length) % projects.length;
+
+                var bgs      = [].slice.call(document.querySelectorAll('.projects__bgs [data-f-bg]'));
+                var bgImgs   = [].slice.call(document.querySelectorAll('.projects__bgs [data-f-bg-i]'));
+                var imgs     = [].slice.call(document.querySelectorAll('[data-t-assets] [data-f-img]'));
+                var imgInner = [].slice.call(document.querySelectorAll('[data-t-assets] [data-f-img-i]'));
+                var texts    = [].slice.call(document.querySelectorAll('.projects__text-wrapper .projects__text'));
+                var card     = document.querySelector('.projects__card');
+                var link     = document.querySelector('.projects__link');
+
+                var goingRight  = dir === 1;
+
+                /* Clip values:
+                   entering slide starts hidden on the side we're coming FROM,
+                   leaving slide exits to the opposite side.
+                   goingRight → new enters from right (HIDE_RIGHT), old exits to left (HIDE_LEFT) */
+                var clipEnter = goingRight ? CLIP_HIDE_RIGHT : CLIP_HIDE_LEFT;
+                var clipExit  = goingRight ? CLIP_HIDE_LEFT  : CLIP_HIDE_RIGHT;
+
+                var cur = {
+                    bg:      bgs[currentIndex],
+                    bgImg:   bgImgs[currentIndex],
+                    img:     imgs[currentIndex],
+                    inner:   imgInner[currentIndex],
+                    text:    texts[currentIndex]
+                };
+                var prev = {
+                    bg:      bgs[prevIndex],
+                    bgImg:   bgImgs[prevIndex],
+                    img:     imgs[prevIndex],
+                    inner:   imgInner[prevIndex],
+                    text:    texts[prevIndex]
+                };
+
+                /* ─ Step 1: Set entering slide to hidden start state (no transition) */
+                if (cur.bg)    { cur.bg.style.transition = 'none';    cur.bg.style.clipPath  = clipEnter; }
+                if (cur.img)   { cur.img.style.transition = 'none';   cur.img.style.clipPath = clipEnter; }
+                if (cur.bgImg) { cur.bgImg.style.transition = 'none'; cur.bgImg.style.transform = 'scale(1.3)'; }
+                if (cur.inner) { cur.inner.style.transition = 'none'; cur.inner.style.transform = 'scale(1.3)'; }
+                if (cur.text)  {
+                    cur.text.style.transition = 'none';
+                    cur.text.style.opacity    = '0';
+                    cur.text.style.transform  = goingRight ? 'translateY(25px)' : 'translateY(-25px)';
+                }
+
+                /* ─ Step 2: Force reflow so browser acknowledges the starting state */
+                flush();
+
+                /* ─ Step 3: Apply transitions and animate to final states */
+                var clipDur = DUR + 's ' + EASE;
+                var scaleDur = DUR + 's ' + EASE;
+
+                /* Exiting slide wipes out */
+                if (prev.bg)  {
+                    prev.bg.style.transition = 'clip-path ' + clipDur;
+                    prev.bg.style.clipPath   = clipExit;
+                }
+                if (prev.img) {
+                    prev.img.style.transition = 'clip-path ' + clipDur;
+                    prev.img.style.clipPath   = clipExit;
+                }
+                /* Exiting images zoom out slightly as they leave */
+                if (prev.bgImg) {
+                    prev.bgImg.style.transition = 'transform ' + scaleDur;
+                    prev.bgImg.style.transform  = 'scale(1.3)';
+                }
+                if (prev.inner) {
+                    prev.inner.style.transition = 'transform ' + scaleDur;
+                    prev.inner.style.transform  = 'scale(1.3)';
+                }
+                /* Exiting text fades out quickly */
+                if (prev.text) {
+                    prev.text.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+                    prev.text.style.opacity    = '0';
+                    prev.text.style.transform  = goingRight ? 'translateY(-15px)' : 'translateY(15px)';
+                }
+
+                /* Entering slide wipes in */
+                if (cur.bg) {
+                    cur.bg.style.transition = 'clip-path ' + clipDur;
+                    cur.bg.style.clipPath   = CLIP_VISIBLE;
+                }
+                if (cur.img) {
+                    cur.img.style.transition = 'clip-path ' + clipDur;
+                    cur.img.style.clipPath   = CLIP_VISIBLE;
+                }
+                /* Entering images zoom in to natural size */
+                if (cur.bgImg) {
+                    cur.bgImg.style.transition = 'transform ' + scaleDur;
+                    cur.bgImg.style.transform  = 'scale(1)';
+                }
+                if (cur.inner) {
+                    cur.inner.style.transition = 'transform ' + scaleDur;
+                    cur.inner.style.transform  = 'scale(1)';
+                }
+
+                /* Entering text fades in after image is partway through */
+                var curTextEl = cur.text;
+                var curGoingRight = goingRight;
+                setTimeout(function () {
+                    if (curTextEl) {
+                        curTextEl.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        curTextEl.style.opacity    = '1';
+                        curTextEl.style.transform  = 'translateY(0)';
+                    }
+                }, 400);
+
+                /* Update active / prev classes */
+                bgs.forEach(function (el, i) {
+                    el.classList.toggle('active', i === currentIndex);
+                    el.classList.toggle('prev',   i === prevIndex && i !== currentIndex);
+                });
+                imgs.forEach(function (el, i) {
+                    el.classList.toggle('active', i === currentIndex);
+                    el.classList.toggle('prev',   i === prevIndex && i !== currentIndex);
+                });
+
+                /* Update card slug and link for current project */
+                if (card && projects[currentIndex]) {
+                    card.setAttribute('data-slug', projects[currentIndex].slug);
+                }
+                if (link && projects[currentIndex]) {
+                    link.href = '/projects/' + projects[currentIndex].slug;
+                }
+
+                /* Unlock after animation completes */
+                setTimeout(function () { isAnimating = false; }, DUR * 1000 + 100);
+            }
+
+            /* ── Wire navigation arrows ────────────────────────────── */
+            function setupNav() {
+                var navBtns = document.querySelectorAll('.floating-nav__btn');
+                if (navBtns.length >= 2) {
+                    /* Clone to remove any previous listeners */
+                    [0, 1].forEach(function (idx) {
+                        var old = navBtns[idx];
+                        var fresh = old.cloneNode(true);
+                        old.parentNode.replaceChild(fresh, old);
+                    });
+
+                    var btns = document.querySelectorAll('.floating-nav__btn');
+                    btns[0].addEventListener('click', function (e) {
+                        e.stopImmediatePropagation();
+                        navigate(-1);
+                    }, true);
+                    btns[1].addEventListener('click', function (e) {
+                        e.stopImmediatePropagation();
+                        navigate(1);
+                    }, true);
+                }
+            }
+
+            /* ── Replace Nuxt's dynamic filter buttons ─────────────── */
+            function rebuildFilterButtons() {
+                var filterUl = document.querySelector('.category-filter');
+                if (!filterUl) return;
+
+                var categories = [
+                    { key: 'ongoing',   label: 'ONGOING'   },
+                    { key: 'completed', label: 'COMPLETED' },
+                    { key: 'upcoming',  label: 'UPCOMING'  }
+                ];
+
+                filterUl.innerHTML = categories.map(function (cat, i) {
+                    var isActive = cat.key === currentCategory;
+                    var sep = i < categories.length - 1
+                        ? '<span role="separator" aria-orientation="vertical" data-v-688578a0>|</span>'
+                        : '';
+                    return '<li class="category-filter__item' +
+                        (isActive ? ' category-filter__item--active' : '') +
+                        '" data-v-688578a0>' +
+                        '<button type="button" class="category-filter__btn underline' +
+                        (isActive ? ' underline--active' : '') +
+                        '" data-custom-filter="' + cat.key + '" data-v-688578a0>' +
+                        cat.label + '</button>' + sep + '</li>';
+                }).join('');
+
+                /* Delegated click — capture phase beats Nuxt */
+                filterUl.addEventListener('click', function (e) {
+                    var btn = e.target.closest('[data-custom-filter]');
+                    if (!btn) return;
+                    e.stopImmediatePropagation();
+
+                    var cat = btn.getAttribute('data-custom-filter');
+                    if (cat === currentCategory) return;   /* no-op if same category */
+
+                    currentCategory = cat;
+                    currentIndex    = 0;
+
+                    /* Update active styling on buttons */
+                    filterUl.querySelectorAll('.category-filter__item').forEach(function (li) {
+                        li.classList.remove('category-filter__item--active');
+                    });
+                    filterUl.querySelectorAll('.category-filter__btn').forEach(function (b) {
+                        b.classList.remove('underline--active');
+                    });
+                    var li = btn.closest('.category-filter__item');
+                    if (li) li.classList.add('category-filter__item--active');
+                    btn.classList.add('underline--active');
+
+                    rebuildSlider(getProjects(cat));
+                    setupNav();
+                }, true);
+            }
+
+            /* ── Boot ──────────────────────────────────────────────── */
+            function init() {
+                var filterUl = document.querySelector('.category-filter');
+                var bgsEl    = document.querySelector('.projects__bgs');
+
+                if (!filterUl || !bgsEl) {
+                    setTimeout(init, 300);
+                    return;
+                }
+
+                rebuildFilterButtons();
+                rebuildSlider(getProjects(currentCategory));
+                setupNav();
+            }
+
+            /* Give Nuxt ~700 ms to hydrate, then take over */
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function () { setTimeout(init, 700); });
+            } else {
+                setTimeout(init, 700);
+            }
+        })();
+        </script>
+
         <script>
             window.__NUXT__ = {};
             window.__NUXT__.config = {
