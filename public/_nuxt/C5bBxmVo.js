@@ -24705,8 +24705,8 @@ const iI = pw(rI)
                     content: "width=device-width, initial-scale=1"
                 }), pe(u, {
                     rel: "icon",
-                    type: "image/x-icon",
-                    href: "/favicon.ico"
+                    type: "image/png",
+                    href: "/assets/building_logo-06bfecb9.png"
                 })]),
                 _: 1
             }), pe(f), pe(ju, {
