@@ -2,7 +2,7 @@ module ApplicationHelper
   def footer_lines
     [
       "We KNOW EVERYTHING YOU NEED aBOUT PROPERTY",
-      "Mr. Kuldeepsinh Gohil",
+      "Mr. Kuldipsinh Gohil",
       "Founder Shivshakti group"
     ]
   end
