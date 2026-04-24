@@ -5116,10 +5116,10 @@ Management</h3>
                                                     <p class="cd-item__text" data-v-b056a380>Established in December 2021, Soul Hospital is a 75-bedded super specialty hospital located in the heart of Bhavnagar, Gujarat. Bringing together a team of highly reputed senior doctors with over two decades of trusted service, we offer advanced medical care across multiple specialties all under one roof. Our mission is to deliver compassionate, state-of-the-art healthcare while continuously upgrading our facilities to meet modern medical needs. Soul Hospital is more than a healthcare center it’s a promise of quality, care, and commitment to the people of Bhavnagar and surrounding regions. Your healing journey begins here",</p>
                                                 </li>
                                                 <li class="cd__item cd-item" data-v-b056a380>
-                                                    <h3 class="cd-item__title" data-v-b056a380>SID  
+                                                    <h3 class="cd-item__title" data-v-b056a380>SID
 Consultancy</h3>
                                                     <img onerror="this.setAttribute(&#39;data-error&#39;, 1)" width="700" alt data-nuxt-img class="custom-image custom-image--loading cd-item__asset" data-v-b056a380 src="https://a2.storyblok.com/f/331817/648x492/52640e16ea/image-4.jpg/m/10x10/filters:format(webp):quality(50)" data-v-565e5924>
-                                                    <p class="cd-item__text" data-v-b056a380>Established in December 2021, Soul Hospital is a 75-bedded super specialty hospital located in the heart of Bhavnagar, Gujarat. Bringing together a team of highly reputed senior doctors with over two decades of trusted service, we offer advanced medical care across multiple specialties all under one roof. Our mission is to deliver compassionate, state-of-the-art healthcare while continuously upgrading our facilities to meet modern medical needs. Soul Hospital is more than a healthcare center it’s a promise of quality, care, and commitment to the people of Bhavnagar and surrounding regions. Your healing journey begins here",</p>
+                                                    <p class="cd-item__text" data-v-b056a380>13 years old company, Aditya Group is a trusted name in the real estate sector, known for delivering high-quality residential and commercial projects in prime locations of Bhavnagar. With a strong commitment to excellence, innovation, and customer satisfaction, the group has established itself as a reliable developer catering to modern lifestyle needs and business requirements. Our residential developments are designed to offer comfort, convenience, and modern living, featuring prime locations with excellent connectivity, spacious and well-ventilated homes, modern architecture and aesthetic design, quality construction and durable materials, and amenities for a comfortable lifestyle.</p>
                                                 </li>
                                                 <!--]-->
                                             </ul>
@@ -10892,6 +10892,65 @@ Consultancy</h3>
             cdnURL: ""
         }
     }
+</script>
+<script>
+/* =====================================================================
+   Companies section — description overrides by title
+   ---------------------------------------------------------------------
+   Nuxt hydration rebuilds the "cd__item" cards from __NUXT_DATA__, which
+   shares a single description index across multiple companies — that's
+   why Aditya Group inherits the Soul Hospital text. This script finds
+   each card by its <h3> title and overrides the <p> description with
+   the correct text. To fix or add an override, edit DESC_OVERRIDES.
+   ===================================================================== */
+(function () {
+    'use strict';
+
+    /* Keys must match the rendered title text exactly (whitespace ignored). */
+    var DESC_OVERRIDES = {
+        'Aditya Group': '13 years old company, Aditya Group is a trusted name in the real estate sector, known for delivering high-quality residential and commercial projects in prime locations of Bhavnagar. With a strong commitment to excellence, innovation, and customer satisfaction, the group has established itself as a reliable developer catering to modern lifestyle needs and business requirements. Our residential developments are designed to offer comfort, convenience, and modern living, featuring prime locations with excellent connectivity, spacious and well-ventilated homes, modern architecture and aesthetic design, quality construction and durable materials, and amenities for a comfortable lifestyle.'
+    };
+
+    function applyOverrides() {
+        var items = document.querySelectorAll('.cd__item, li.cd-item');
+        if (!items.length) return false;
+        var didWork = false;
+        for (var i = 0; i < items.length; i++) {
+            var titleEl = items[i].querySelector('.cd-item__title');
+            var descEl  = items[i].querySelector('.cd-item__text');
+            if (!titleEl || !descEl) continue;
+            var key = titleEl.textContent.replace(/\s+/g, ' ').trim();
+            var want = DESC_OVERRIDES[key];
+            if (want && descEl.textContent.trim() !== want) {
+                descEl.textContent = want;
+                didWork = true;
+            }
+        }
+        return didWork || items.length > 0;
+    }
+
+    /* Enforce during the full hydration window (~6s), every animation frame. */
+    function startEnforcement() {
+        var start = Date.now();
+        function tick() {
+            applyOverrides();
+            if (Date.now() - start < 6000) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', startEnforcement);
+    } else {
+        startEnforcement();
+    }
+
+    /* Long-term: observe for any later re-renders and re-apply. */
+    setTimeout(function () {
+        var mo = new MutationObserver(applyOverrides);
+        mo.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+    }, 6000);
+})();
 </script>
 <script>
 (function () {
