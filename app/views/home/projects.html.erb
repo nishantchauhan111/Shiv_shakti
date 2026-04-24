@@ -14004,7 +14004,8 @@
                         slug: 'aawad-empire',
                         title: 'Aawad Empire',
                         desc: 'Modern residential with commercial complex with premium amenities and facilities',
-                        img: '<%= asset_path("project/awad_empire.png") %>'
+                        img: '<%= asset_path("project/awad_empire.png") %>',
+                        pdf: '<%= asset_path("project/aawad_empire.pdf") %>'
                     },
                     {
                         slug: 'madhavbag',
@@ -14175,6 +14176,26 @@
                 });
             }
 
+            /* ── Update card link/label based on project (PDF vs. page) ── */
+            function updateCardLink(link, card, project) {
+                if (!project) return;
+                if (card) card.setAttribute('data-slug', project.slug);
+                if (!link) return;
+                var labels = link.querySelectorAll('.btn__content span[data-v-00c1618f]');
+                if (project.pdf) {
+                    link.href = project.pdf;
+                    link.setAttribute('download', '');
+                    link.setAttribute('rel', 'noopener');
+                    link.setAttribute('target', '_blank');
+                    for (var i = 0; i < labels.length; i++) labels[i].textContent = 'Download Brochure';
+                } else {
+                    link.href = '/projects/' + project.slug;
+                    link.removeAttribute('download');
+                    link.removeAttribute('target');
+                    for (var j = 0; j < labels.length; j++) labels[j].textContent = 'Go to Project';
+                }
+            }
+
             /* ── Rebuild entire slider for a project list ──────────── */
             function rebuildSlider(projects) {
                 var bgsEl    = document.querySelector('.projects__bgs');
@@ -14189,13 +14210,8 @@
                 assetsEl.innerHTML = '<!--[-->' + projects.map(imgHTML).join('') + '<!--]-->';
                 textEl.innerHTML   = '<!--[-->' + projects.map(textHTML).join('') + '<!--]-->';
 
-                /* Update card slug and link href for first project */
-                if (card && projects[0]) {
-                    card.setAttribute('data-slug', projects[0].slug);
-                }
-                if (link && projects[0]) {
-                    link.href = '/projects/' + projects[0].slug;
-                }
+                /* Update card slug and link (PDF download or project page) */
+                updateCardLink(link, card, projects[0]);
 
                 /* Set initial visual states (no animation) */
                 initSliderStates();
@@ -14329,13 +14345,8 @@
                     el.classList.toggle('prev',   i === prevIndex && i !== currentIndex);
                 });
 
-                /* Update card slug and link for current project */
-                if (card && projects[currentIndex]) {
-                    card.setAttribute('data-slug', projects[currentIndex].slug);
-                }
-                if (link && projects[currentIndex]) {
-                    link.href = '/projects/' + projects[currentIndex].slug;
-                }
+                /* Update card slug and link (PDF download or project page) */
+                updateCardLink(link, card, projects[currentIndex]);
 
                 /* Unlock after animation completes */
                 setTimeout(function () { isAnimating = false; }, DUR * 1000 + 100);
@@ -14499,6 +14510,7 @@
     document.addEventListener('click', function (e) {
         var link = e.target.closest('a[href]');
         if (!link) return;
+        if (link.hasAttribute('download')) return;
         var href = link.getAttribute('href');
         if (!href) return;
         if (href.charAt(0) === '#' ||

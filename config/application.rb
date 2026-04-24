@@ -17,6 +17,7 @@ module ShivShakti
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.assets.paths << Rails.root.join("vendor/javascript")
+    config.assets.paths << Rails.root.join("app/assets/documents")
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
