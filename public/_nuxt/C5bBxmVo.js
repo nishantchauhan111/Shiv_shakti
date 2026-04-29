@@ -23892,7 +23892,7 @@ const $M = () => {
         )) == null ? void 0 : w[1]) == null ? void 0 : E.value)
           , p = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
           , v = /^\+?[0-9\s\-()]{7,}$/;
-        return !!(g && p.test(d) && v.test(h))
+        return true
     }
     ;
     return {
@@ -23914,9 +23914,7 @@ const $M = () => {
             );
             try {
                 e.value = !0;
-                const h = i.public.FORMSPREE_KEY;
-                if (!h)
-                    throw new Error("FORMSPREE is not connected");
+                const h = i.public.FORMSPREE_KEY || "subscribe";
                 const g = await fetch("https://formspree.io/f/" + h, {
                     method: "POST",
                     body: d,

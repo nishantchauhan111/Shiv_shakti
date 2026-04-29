@@ -14135,6 +14135,87 @@
                     '</div>';
             }
 
+            /* ── Mobile list (separate Vue component, separate DOM tree) ──
+               Below 860px Vue mounts ProjectsListMobile (data-v-03285327)
+               which renders <section class="projects-m"> with a vertical
+               <ul class="projects-m__list"> of project cards. The SSR
+               doesn't include this section — it appears only after Vue
+               hydrates. The desktop structure (.projects__bgs etc.) does
+               not exist on mobile, so the desktop-targeted rebuild is a
+               no-op there. We need a mobile-specific builder. */
+            function escapeAttr(s) {
+                return String(s == null ? '' : s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+            }
+
+            function mobileItemHTML(p) {
+                /* Vue's mobile component scope: data-v-03285327.
+                   Adding it on every element keeps the scoped CSS working. */
+                var dv = ' data-v-03285327=""';
+                var hasPdf = !!p.pdf;
+                var href = hasPdf ? p.pdf : ('/projects/' + p.slug);
+                var label = hasPdf ? 'Download Brochure' : 'Go to Project';
+                var dl = hasPdf ? ' download target="_blank" rel="noopener"' : '';
+                return '<li class="projects-m__item project-m"' + dv + '>' +
+                    '<div class="project-m__bg"' + dv + '>' +
+                        '<img class="custom-image project-m__bg" src="' + escapeAttr(p.img) +
+                        '" alt="' + escapeAttr(p.title) + '" width="800"' + dv + ' data-v-565e5924>' +
+                    '</div>' +
+                    '<div class="project-m__card" data-t-card data-slug="' + escapeAttr(p.slug) + '"' + dv + '>' +
+                        '<div class="project-m__img-wrapper" data-f-img-i' + dv + '>' +
+                            '<img class="custom-image project-m__card-img" data-t-img' +
+                            ' src="' + escapeAttr(p.img) + '" data-slug="' + escapeAttr(p.slug) +
+                            '" alt="' + escapeAttr(p.title) + '" width="800"' + dv + ' data-v-565e5924>' +
+                        '</div>' +
+                        '<div class="project-m__content"' + dv + '>' +
+                            '<h2 class="project-m__title"' + dv + '>' + escapeAttr(p.title) + '</h2>' +
+                            '<p class="project-m__text"' + dv + '>' + escapeAttr(p.desc) + '</p>' +
+                            '<a class="m-project__link btn btn--primary" href="' + escapeAttr(href) + '"' +
+                            dl + dv + ' data-v-7d38ae27>' +
+                                '<span class="btn__content-wrapper" data-v-7d38ae27>' +
+                                    '<span class="btn__content" data-v-7d38ae27>' +
+                                        '<span' + dv + '>' + label + '</span>' +
+                                        '<svg width="20" height="20" viewbox="0 0 20 20" fill="none"' +
+                                        ' xmlns="http://www.w3.org/2000/svg"' + dv + '>' +
+                                        '<path d="M3.53102 3.52659L15.3258 3.51869L15.3272 3.51732L15.3285 3.51869L16.5067 3.51791L16.4981 16.4913L14.8304 16.4924L14.8371 6.36442L4.13151 17.07L2.953 15.8915L13.6568 5.18766L3.52992 5.19436L3.53102 3.52659Z"' +
+                                        ' fill="currentColor"></path></svg>' +
+                                    '</span>' +
+                                '</span>' +
+                            '</a>' +
+                        '</div>' +
+                    '</div>' +
+                '</li>';
+            }
+
+            function rebuildMobileList(projects) {
+                var listEl = document.querySelector('.projects-m__list');
+                if (!listEl) return false;
+                listEl.innerHTML = projects.map(mobileItemHTML).join('');
+                /* Hide the "More" button if it exists — we have ≤10 projects per
+                   category so all fit in the initial slice and "More" is unwanted. */
+                var moreBtn = document.querySelector('.projects-m__more-btn');
+                if (moreBtn) moreBtn.style.display = 'none';
+                return true;
+            }
+
+            function mobileTitlesMatch() {
+                var titles = document.querySelectorAll('.projects-m__list .project-m__title');
+                if (titles.length === 0) return true;
+                var projects = getProjects(currentCategory);
+                if (titles.length !== projects.length) return false;
+                var expected = {};
+                for (var i = 0; i < projects.length; i++) {
+                    expected[projects[i].title.trim()] = true;
+                }
+                for (var j = 0; j < titles.length; j++) {
+                    if (!expected[titles[j].textContent.trim()]) return false;
+                }
+                return true;
+            }
+
             /* ── Set a CSS property immediately (no transition) ─────── */
             function setNow(el, prop, val) {
                 if (!el) return;
@@ -14410,14 +14491,20 @@
                         cat.label + '</button>' + sep + '</li>';
                 }).join('');
 
-                /* Delegated click — capture phase beats Nuxt */
+                /* Delegated click — capture phase beats Nuxt.
+                   Match either our data-custom-filter (set above) OR Nuxt's
+                   data-filter (the SSR/hydrated form) — on slow mobile, Nuxt
+                   may re-render the list after our init runs, restoring its
+                   own data-filter attributes; with both supported, the
+                   handler keeps working through that race. */
                 filterUl.addEventListener('click', function (e) {
-                    var btn = e.target.closest('[data-custom-filter]');
+                    var btn = e.target.closest('[data-custom-filter], [data-filter]');
                     if (!btn) return;
                     e.stopImmediatePropagation();
 
-                    var cat = btn.getAttribute('data-custom-filter');
-                    if (cat === currentCategory) return;   /* no-op if same category */
+                    var cat = btn.getAttribute('data-custom-filter') ||
+                              btn.getAttribute('data-filter');
+                    if (!cat || cat === currentCategory) return;   /* no-op if same category */
 
                     currentCategory = cat;
                     currentIndex    = 0;
@@ -14441,16 +14528,23 @@
             /* ── Boot ──────────────────────────────────────────────── */
             function init() {
                 var filterUl = document.querySelector('.category-filter');
-                var bgsEl    = document.querySelector('.projects__bgs');
-
-                if (!filterUl || !bgsEl) {
+                if (!filterUl) {
                     setTimeout(init, 300);
                     return;
                 }
 
                 rebuildFilterButtons();
-                rebuildSlider(getProjects(currentCategory));
-                setupNav();
+
+                /* Desktop slider: only update if its DOM is present. */
+                var bgsEl = document.querySelector('.projects__bgs');
+                if (bgsEl) {
+                    rebuildSlider(getProjects(currentCategory));
+                    setupNav();
+                }
+
+                /* Mobile list: only update if its DOM is present (Vue mounts
+                   ProjectsListMobile under 860px after hydration). */
+                rebuildMobileList(getProjects(currentCategory));
             }
 
             /* Give Nuxt ~700 ms to hydrate, then take over */
@@ -14459,6 +14553,138 @@
             } else {
                 setTimeout(init, 700);
             }
+
+            /* ── Mobile-specific safety nets ─────────────────────────────
+               Two ADDITIONS only (no changes to anything above). They
+               cannot break desktop because:
+                 • The doc-level click handler runs in capture and only
+                   takes over when a filter button is clicked. On desktop
+                   it just runs the same logic before the existing UL-level
+                   handler (stopImmediatePropagation prevents the duplicate).
+                 • The MutationObserver observes ONLY childList on the
+                   text-wrapper (and its parent) — NOT attributes. The
+                   slide-transition animation only changes style/class
+                   attributes, so the observer never fires during a slide.
+                 • Both rebuild paths skip when isAnimating is true. */
+
+            /* (1) Document-level filter click delegation. Critical detail:
+               the compiled Vue CategoryFilter component renders buttons
+               WITHOUT any data-filter/data-custom-filter attributes (just
+               class + Vue @click). So when Nuxt hydrates on mobile and
+               replaces the SSR buttons with Vue-rendered attribute-less
+               buttons, an attribute-based selector finds nothing. We
+               instead match by class (.category-filter__btn) and infer
+               the category from the button's text content — that survives
+               every render path (SSR, our rebuild, Nuxt's hydration). */
+            var TEXT_TO_CATEGORY = {
+                'ONGOING':   'ongoing',
+                'COMPLETED': 'completed',
+                'UPCOMING':  'upcoming'
+            };
+
+            document.addEventListener('click', function (e) {
+                if (!e.target || !e.target.closest) return;
+                var btn = e.target.closest('.category-filter__btn');
+                if (!btn) return;
+                var ul = btn.closest('.category-filter');
+                if (!ul) return;
+
+                /* Resolve category in this priority:
+                     1. our data-custom-filter (if our rebuild is still in DOM)
+                     2. SSR's data-filter (if SSR buttons are still in DOM)
+                     3. button text mapped to a known category (Vue-rendered case) */
+                var cat = btn.getAttribute('data-custom-filter') ||
+                          btn.getAttribute('data-filter') ||
+                          TEXT_TO_CATEGORY[btn.textContent.replace(/\s+/g, ' ').trim().toUpperCase()];
+                if (!cat || cat === currentCategory) return;
+
+                /* Block Vue's @click handler from running — otherwise Vue
+                   would emit its own 'filter' event, the parent would
+                   re-render the slider from stale __NUXT_DATA__, and
+                   we'd be back to the start. */
+                e.preventDefault();
+                e.stopImmediatePropagation();
+
+                currentCategory = cat;
+                currentIndex    = 0;
+
+                ul.querySelectorAll('.category-filter__item').forEach(function (li) {
+                    li.classList.remove('category-filter__item--active');
+                });
+                ul.querySelectorAll('.category-filter__btn').forEach(function (b) {
+                    b.classList.remove('underline--active');
+                });
+                var liEl = btn.closest('.category-filter__item');
+                if (liEl) liEl.classList.add('category-filter__item--active');
+                btn.classList.add('underline--active');
+
+                /* Update both renderings — whichever DOM exists for the
+                   current viewport will be updated, the other is a no-op. */
+                rebuildSlider(getProjects(cat));
+                setupNav();
+                rebuildMobileList(getProjects(cat));
+            }, true /* capture phase, so we beat any Nuxt bubble handler */);
+
+            /* (2) Hydration watch — rebuilds slider OR mobile list when
+               Nuxt overwrites with stale __NUXT_DATA__. Observes only
+               childList (not attributes) so slide-transition animations
+               don't trigger it. Reconcile is rAF-debounced and skips
+               while isAnimating. */
+            (function setupHydrationWatch() {
+                function start() {
+                    var anchor = document.querySelector('main') || document.body;
+                    if (!anchor) { setTimeout(start, 300); return; }
+
+                    var pending = false;
+
+                    function desktopTitlesMatch() {
+                        var titles = document.querySelectorAll('.projects__text-wrapper .projects__title');
+                        if (titles.length === 0) return true;
+                        var projects = getProjects(currentCategory);
+                        if (titles.length !== projects.length) return false;
+                        var expected = {};
+                        for (var i = 0; i < projects.length; i++) {
+                            expected[projects[i].title.trim()] = true;
+                        }
+                        for (var j = 0; j < titles.length; j++) {
+                            if (!expected[titles[j].textContent.trim()]) return false;
+                        }
+                        return true;
+                    }
+
+                    function reconcile() {
+                        pending = false;
+                        if (isAnimating) return;
+
+                        /* Desktop slider reconcile (only if its DOM is present). */
+                        if (document.querySelector('.projects__text-wrapper') && !desktopTitlesMatch()) {
+                            rebuildSlider(getProjects(currentCategory));
+                            setupNav();
+                        }
+
+                        /* Mobile list reconcile (only if its DOM is present). */
+                        if (document.querySelector('.projects-m__list') && !mobileTitlesMatch()) {
+                            rebuildMobileList(getProjects(currentCategory));
+                        }
+                    }
+
+                    var mo = new MutationObserver(function () {
+                        if (pending) return;
+                        pending = true;
+                        requestAnimationFrame(reconcile);
+                    });
+                    /* Observe the page body so we catch BOTH the desktop slider's
+                       hydration AND the moment Vue mounts the mobile list (which
+                       is a fresh element added to the DOM). childList only — no
+                       attribute observation, so animations don't trigger this. */
+                    mo.observe(anchor, { childList: true, subtree: true });
+                }
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', start);
+                } else {
+                    start();
+                }
+            })();
         })();
         </script>
 
