@@ -20,8 +20,8 @@ module ApplicationHelper
       "+91 9023187500",
       "https://share.google/7sbwZQlDz2kyGZmdW",
       "Everyday  10 - 18",
-      "https://www.linkedin.com/company/sidthailand/",
-      "https://www.facebook.com/sidphuket",
+      "https://www.linkedin.com/in/shiv-shakti-group-15b760398",
+      "https://www.facebook.com/share/1Kepaw35wG",
       "https://www.instagram.com/shivshaktii_group/"
     ]
   end

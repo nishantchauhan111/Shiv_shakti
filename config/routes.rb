@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "consulting" => "home#consulting"
   get "contact" => "home#contact"
   get "news" => "home#news"
+  get "legal/privacy-policy" => "home#privacy-policy"
   post "quiz_submissions", to: "quiz_submissions#create"
 
   # Proxy Storyblok CDN image requests (NuxtImg strips the domain, producing relative /f/... paths)
